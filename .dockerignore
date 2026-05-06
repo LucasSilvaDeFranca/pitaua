@@ -1,0 +1,40 @@
+# Build artifacts (regenerated inside container)
+node_modules
+.next
+out
+build
+coverage
+
+# Git & editor
+.git
+.gitignore
+.vscode
+.idea
+*.code-workspace
+
+# Local env (use docker run -e or compose secrets instead)
+.env*
+!.env.example
+
+# Logs & OS
+*.log
+.DS_Store
+
+# Vercel CLI artifacts
+.vercel
+
+# Docker self-references
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Documentation / non-runtime assets
+README.md
+LOGO PITAUA*.png
+LOGO PITAUA*.pdf
+
+# Claude Code / agent state
+.claude
+
+# 125MB of pre-optimization originals (regenerable from scripts/optimize-images.mjs)
+public/images/.backup
