@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import {
+  Antonio,
   Cinzel,
   Cormorant_Garamond,
   DM_Sans,
@@ -8,6 +9,17 @@ import {
 import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
+// Antonio Bold — substituto direto do "Antonio Bold" do branding book oficial.
+// Usado em "PITAUÁ" (logotipo wordmark).
+const antonio = Antonio({
+  variable: "--font-antonio",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+});
+
+// Cinzel — substituto livre do "Trajan Pro" do branding book.
+// Usado em "CENTRO DE LAZER" e outros títulos serif.
 const cinzel = Cinzel({
   variable: "--font-display",
   subsets: ["latin"],
@@ -15,6 +27,8 @@ const cinzel = Cinzel({
   display: "swap",
 });
 
+// Petit Formal Script — substituto livre do "DirtyBitch" do branding book.
+// Usado em "Raízes do Interior" (assinatura cursiva).
 const petit = Petit_Formal_Script({
   variable: "--font-script",
   subsets: ["latin"],
@@ -76,7 +90,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#FAF4E6" },
-    { media: "(prefers-color-scheme: dark)", color: "#2A1D14" },
+    { media: "(prefers-color-scheme: dark)", color: "#302621" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -91,7 +105,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${cinzel.variable} ${petit.variable} ${cormorant.variable} ${dmSans.variable}`}
+      className={`${antonio.variable} ${cinzel.variable} ${petit.variable} ${cormorant.variable} ${dmSans.variable}`}
       suppressHydrationWarning
     >
       <body className="min-h-screen flex flex-col antialiased">

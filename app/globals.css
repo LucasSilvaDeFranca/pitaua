@@ -1,35 +1,46 @@
 @import "tailwindcss";
 
-/* ─── Design tokens ─── */
+/* ─────────────────────────────────────────────────────────────
+   Pitauá — Design Tokens
+   Alinhado ao Branding Book oficial (Pantone primárias + secundárias).
+   PALETA PRIMÁRIA:   BLACK 4C · 124C · 7510C
+   PALETA SECUNDÁRIA: 350C · 5747C · 484C · 7565C · 582C
+   ───────────────────────────────────────────────────────────── */
 @theme {
-  /* ─── Ink + paper (extracted from logo) ─── */
-  --color-pitaua-ink:     #2A1D14;
-  --color-pitaua-dark:    #2A1D14;   /* alias of ink, kept for backwards compat */
-  --color-pitaua-surface: #1F1610;
-  --color-pitaua-border:  #3A2C20;
-  --color-pitaua-rule:    #E2D6BC;
+  /* ─── PRIMÁRIAS (oficiais) ─── */
+  --color-pitaua-ink:     #302621;   /* BLACK 4C — texto principal, "PITAUÁ" */
+  --color-pitaua-sun:     #EBA900;   /* 124C — amarelo ipê (peito do bem-te-vi) */
+  --color-pitaua-earth:   #C7893E;   /* 7510C — bronze, "CENTRO DE LAZER" */
 
-  /* ─── Cream / paper family ─── */
-  --color-pitaua-paper: #FAF4E6;
-  --color-pitaua-light: #FAF4E6;     /* alias of paper */
-  --color-pitaua-cream: #F1E8D0;
+  /* ─── SECUNDÁRIAS (oficiais) ─── */
+  --color-pitaua-brown:   #5B4926;   /* 350C  — marrom escuro */
+  --color-pitaua-olive:   #3D441D;   /* 5747C — verde oliva escuro (capa CORES) */
+  --color-pitaua-brick:   #9E3223;   /* 484C  — vermelho tijolo (capa REGRAS) */
+  --color-pitaua-orange:  #D47E00;   /* 7565C — laranja vivo */
+  --color-pitaua-sage:    #A09F77;   /* 582C  — sálvia / oliva claro */
 
-  /* ─── Watercolor accents (from bird splotches) ─── */
-  --color-pitaua-earth:       #B98D3F;  /* gold-ochre, "CENTRO DE LAZER" */
-  --color-pitaua-earth-light: #D69A3C;  /* ochre splotch */
-  --color-pitaua-ochre:       #D69A3C;
-  --color-pitaua-sun:         #F1B434;  /* bright sun-yellow splotch */
+  /* ─── Tons derivados (papel + suporte) ─── */
+  --color-pitaua-paper:   #FAF4E6;   /* fundo cremoso */
+  --color-pitaua-cream:   #F1E8D0;   /* superfície destacada */
+  --color-pitaua-rule:    #E2D6BC;   /* linha divisória cremosa */
+  --color-pitaua-surface: #221A15;   /* fundo dark profundo (derivado do ink) */
+  --color-pitaua-border:  #5B4926;   /* alias do brown — bordas/gradientes dark */
+  --color-pitaua-muted:   #7A6A55;   /* texto secundário */
 
-  /* ─── Secondary copy ─── */
-  --color-pitaua-muted: #7A6A55;
+  /* ─── Aliases legados (mantém compat com código existente) ─── */
+  --color-pitaua-dark:        #302621;   /* alias de ink */
+  --color-pitaua-light:       #FAF4E6;   /* alias de paper */
+  --color-pitaua-ochre:       #C7893E;   /* alias de earth (alinhado ao oficial) */
+  --color-pitaua-earth-light: #D47E00;   /* alias do orange — hover do bronze */
 
-  /* ─── Fonts ─── */
+  /* ─── Fontes ─── */
+  --font-logo:    var(--font-antonio), "Antonio", "Oswald", "Bebas Neue", sans-serif;
   --font-display: var(--font-display), "Cinzel", "Trajan Pro", Georgia, serif;
   --font-heading: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   --font-script:  var(--font-script), "Petit Formal Script", "Pinyon Script", cursive;
   --font-body:    var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
 
-  /* Animations */
+  /* ─── Animações ─── */
   --animate-fade-up:    fade-up 0.7s cubic-bezier(.22,1,.36,1) both;
   --animate-fade-in:    fade-in 0.6s ease-out both;
   --animate-hero-zoom:  hero-zoom 1.8s cubic-bezier(.22,1,.36,1) both;
@@ -89,14 +100,20 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
-  color: var(--color-pitaua-dark);
-  background-color: var(--color-pitaua-light);
+  color: var(--color-pitaua-ink);
+  background-color: var(--color-pitaua-paper);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: var(--font-heading);
+}
+
+/* ─── Padrão de ondas (assinatura visual do branding book) ─── */
+.wave-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='28' viewBox='0 0 120 28'%3E%3Cpath d='M0 14 Q15 4 30 14 T60 14 T90 14 T120 14' fill='none' stroke='%23302621' stroke-width='0.6' stroke-opacity='0.06'/%3E%3Cpath d='M0 22 Q15 12 30 22 T60 22 T90 22 T120 22' fill='none' stroke='%23302621' stroke-width='0.6' stroke-opacity='0.06'/%3E%3C/svg%3E");
+  background-repeat: repeat;
 }
 
 /* ─── Grain texture overlay ─── */
@@ -117,13 +134,13 @@ h1, h2, h3, h4, h5 {
   animation: var(--animate-grain);
 }
 
-/* ─── Hero overlays ─── */
+/* ─── Hero overlays (recalibrados para ink #302621) ─── */
 .hero-overlay {
   background: linear-gradient(
     to bottom,
-    rgba(42, 29, 20, 0.2) 0%,
-    rgba(42, 29, 20, 0.55) 55%,
-    rgba(42, 29, 20, 0.82) 100%
+    rgba(48, 38, 33, 0.2) 0%,
+    rgba(48, 38, 33, 0.55) 55%,
+    rgba(48, 38, 33, 0.82) 100%
   );
 }
 
@@ -131,9 +148,9 @@ h1, h2, h3, h4, h5 {
 .business-card-overlay {
   background: linear-gradient(
     to top,
-    rgba(42, 29, 20, 0.92) 0%,
-    rgba(42, 29, 20, 0.38) 55%,
-    rgba(42, 29, 20, 0.0) 100%
+    rgba(48, 38, 33, 0.92) 0%,
+    rgba(48, 38, 33, 0.38) 55%,
+    rgba(48, 38, 33, 0.0) 100%
   );
   transition: background 0.45s cubic-bezier(.22,1,.36,1);
 }
@@ -141,20 +158,34 @@ h1, h2, h3, h4, h5 {
 .business-card:hover .business-card-overlay {
   background: linear-gradient(
     to top,
-    rgba(185, 141, 63, 0.95) 0%,
-    rgba(185, 141, 63, 0.5) 55%,
-    rgba(185, 141, 63, 0.08) 100%
+    rgba(199, 137, 62, 0.95) 0%,
+    rgba(199, 137, 62, 0.5) 55%,
+    rgba(199, 137, 62, 0.08) 100%
   );
+}
+
+/* ─── Hover por seção (cores oficiais secundárias) ─── */
+.business-card[data-section="pousada"]:hover .business-card-overlay {
+  background: linear-gradient(to top, rgba(199,137,62,0.95) 0%, rgba(199,137,62,0.5) 55%, rgba(199,137,62,0.08) 100%);
+}
+.business-card[data-section="gastronomia"]:hover .business-card-overlay {
+  background: linear-gradient(to top, rgba(158,50,35,0.92) 0%, rgba(158,50,35,0.45) 55%, rgba(158,50,35,0.06) 100%);
+}
+.business-card[data-section="pesqueiro"]:hover .business-card-overlay {
+  background: linear-gradient(to top, rgba(61,68,29,0.95) 0%, rgba(61,68,29,0.5) 55%, rgba(61,68,29,0.08) 100%);
+}
+.business-card[data-section="eventos"]:hover .business-card-overlay {
+  background: linear-gradient(to top, rgba(235,169,0,0.92) 0%, rgba(235,169,0,0.4) 55%, rgba(235,169,0,0.05) 100%);
 }
 
 /* ─── Image placeholder ─── */
 .image-placeholder {
-  background: linear-gradient(135deg, #3A2C20 0%, #2A1D14 50%, #1F1610 100%);
+  background: linear-gradient(135deg, #5B4926 0%, #302621 50%, #221A15 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #B98D3F;
+  color: #C7893E;
   font-size: 0.72rem;
   font-family: var(--font-body);
   text-align: center;
@@ -186,11 +217,15 @@ h1, h2, h3, h4, h5 {
 .stagger > *:nth-child(5) { animation-delay: 360ms; }
 .stagger > *:nth-child(6) { animation-delay: 450ms; }
 
-/* ─── Gold line ─── */
+/* ─── Linhas divisórias (regras decorativas) ─── */
 .gold-rule {
   height: 1px;
   background: linear-gradient(to right, transparent, var(--color-pitaua-earth), transparent);
 }
+.rule-pousada    { background: linear-gradient(to right, transparent, #C7893E, transparent); }
+.rule-gastronomia{ background: linear-gradient(to right, transparent, #9E3223, transparent); }
+.rule-pesqueiro  { background: linear-gradient(to right, transparent, #3D441D, transparent); }
+.rule-eventos    { background: linear-gradient(to right, transparent, #EBA900, transparent); }
 
 /* ─── No scrollbar (carousel tracks) ─── */
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -204,7 +239,7 @@ h1, h2, h3, h4, h5 {
   z-index: 100;
   padding: 0.75rem 1.25rem;
   background: var(--color-pitaua-earth);
-  color: var(--color-pitaua-dark);
+  color: var(--color-pitaua-ink);
   font-size: 0.875rem;
   font-weight: 500;
   border-radius: 0.5rem;

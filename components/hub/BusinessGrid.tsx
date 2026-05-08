@@ -1,29 +1,37 @@
 import Link from "next/link";
 import { hubContent } from "@/lib/content/hub";
 
+// Cores oficiais por seção (Branding Book Pitauá).
+// `accent` = cor de destaque do número/kicker, escolhida com contraste sobre dark.
+// `bg`     = gradiente de fundo (sempre tons escuros — paper-of-the-night).
+// O hover de cada card usa a cor temática via [data-section] no globals.css.
 const cardConfig = [
   {
     id: "pousada",
+    section: "pousada",
     bg: "from-pitaua-border via-pitaua-ink to-pitaua-surface",
-    accent: "#B98D3F", // earth — institutional gold
+    accent: "#C7893E", // 7510C — bronze (primária)
     number: "01",
   },
   {
     id: "gastronomia",
+    section: "gastronomia",
     bg: "from-pitaua-surface via-pitaua-ink to-pitaua-border",
-    accent: "#D69A3C", // ochre — culinary warmth
+    accent: "#D47E00", // 7565C — laranja vivo (lighter sibling do brick #9E3223)
     number: "02",
   },
   {
     id: "pesqueiro",
-    bg: "from-pitaua-ink via-pitaua-surface to-[#1a1208]",
-    accent: "#F1B434", // sun — bright accent
+    section: "pesqueiro",
+    bg: "from-pitaua-ink via-pitaua-surface to-[#1a120a]",
+    accent: "#A09F77", // 582C — sálvia (lighter sibling do olive #3D441D)
     number: "03",
   },
   {
     id: "eventos",
+    section: "eventos",
     bg: "from-pitaua-border via-pitaua-ink to-pitaua-surface",
-    accent: "#E2D6BC", // rule cream — refined celebration
+    accent: "#EBA900", // 124C — amarelo ipê (primária)
     number: "04",
   },
 ];
@@ -34,12 +42,11 @@ export function BusinessGrid() {
   return (
     <section
       id="areas"
-      className="bg-pitaua-dark py-6 px-4 sm:px-6"
+      className="bg-pitaua-ink py-6 px-4 sm:px-6"
       aria-labelledby="areas-heading"
     >
       <h2 id="areas-heading" className="sr-only">Nossas áreas</h2>
 
-      {/* Desktop: editorial asymmetric layout | Mobile: 2×2 grid */}
       <div className="max-w-7xl mx-auto">
 
         {/* Mobile grid */}
@@ -50,7 +57,8 @@ export function BusinessGrid() {
               <Link
                 key={biz.id}
                 href={biz.href}
-                className={`business-card group relative overflow-hidden rounded-2xl min-h-[200px] sm:min-h-[260px] flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-earth`}
+                data-section={cfg.section}
+                className="business-card group relative overflow-hidden rounded-2xl min-h-[200px] sm:min-h-[260px] flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-earth"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${cfg.bg} transition-transform duration-700 group-hover:scale-105`} aria-hidden />
                 <div className="business-card-overlay absolute inset-0" aria-hidden />
@@ -77,6 +85,7 @@ export function BusinessGrid() {
             return (
               <Link
                 href={biz.href}
+                data-section={cfg.section}
                 className="business-card group col-span-5 row-span-2 relative overflow-hidden rounded-2xl flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-earth"
                 aria-label={`${biz.title} — ${biz.description}`}
               >
@@ -111,6 +120,7 @@ export function BusinessGrid() {
             return (
               <Link
                 href={biz.href}
+                data-section={cfg.section}
                 className="business-card group col-span-4 row-span-1 relative overflow-hidden rounded-2xl flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-earth"
                 aria-label={`${biz.title} — ${biz.description}`}
               >
@@ -134,6 +144,7 @@ export function BusinessGrid() {
             return (
               <Link
                 href={biz.href}
+                data-section={cfg.section}
                 className="business-card group col-span-3 row-span-1 relative overflow-hidden rounded-2xl flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-earth"
                 aria-label={`${biz.title} — ${biz.description}`}
               >
@@ -157,6 +168,7 @@ export function BusinessGrid() {
             return (
               <Link
                 href={biz.href}
+                data-section={cfg.section}
                 className="business-card group col-span-7 row-span-1 relative overflow-hidden rounded-2xl flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-earth"
                 aria-label={`${biz.title} — ${biz.description}`}
               >

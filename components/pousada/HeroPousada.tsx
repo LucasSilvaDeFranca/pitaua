@@ -37,7 +37,7 @@ export function HeroPousada() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom right, rgba(42,29,20,0.55) 0%, rgba(42,29,20,0.25) 40%, transparent 75%)",
+            "linear-gradient(to bottom right, rgba(48,38,33,0.55) 0%, rgba(48,38,33,0.25) 40%, transparent 75%)",
         }}
         aria-hidden
       />
@@ -47,20 +47,20 @@ export function HeroPousada() {
         className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom, transparent 0%, rgba(42,29,20,0.5) 100%)",
+            "linear-gradient(to bottom, transparent 0%, rgba(48,38,33,0.5) 100%)",
         }}
         aria-hidden
       />
 
       <div className="relative z-10 px-6 sm:px-10 pb-20 pt-36 max-w-7xl mx-auto w-full">
         <div className="stagger">
-          <p className="font-display text-pitaua-ochre text-xs font-normal tracking-[0.3em] uppercase mb-5">
+          <p className="font-display text-pitaua-earth text-xs font-normal tracking-[0.3em] uppercase mb-5">
             Pousada · Socorro-SP
           </p>
           <h1 className="text-[clamp(2.8rem,8vw,6rem)] font-light italic text-pitaua-paper leading-[0.95] mb-6 max-w-3xl">
             {hero.title}
           </h1>
-          <div className="gold-rule w-16 mb-6" />
+          <div className="rule-pousada h-px w-16 mb-6" />
           <p className="text-pitaua-paper/80 text-lg max-w-xl leading-relaxed font-light mb-10">
             {hero.subtitle}
           </p>

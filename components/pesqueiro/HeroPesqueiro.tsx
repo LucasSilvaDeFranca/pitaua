@@ -23,13 +23,13 @@ export function HeroPesqueiro() {
 
       <div className="relative z-10 px-6 sm:px-10 pb-20 pt-36 max-w-7xl mx-auto w-full">
         <div className="stagger">
-          <p className="font-display text-pitaua-ochre text-xs font-normal tracking-[0.3em] uppercase mb-5">
+          <p className="font-display text-pitaua-sage text-xs font-normal tracking-[0.3em] uppercase mb-5">
             Pesca Esportiva · Socorro-SP
           </p>
           <h1 className="text-[clamp(2.8rem,8vw,6rem)] font-light italic text-pitaua-paper leading-[0.95] mb-6 max-w-3xl">
             {hero.title}
           </h1>
-          <div className="gold-rule w-16 mb-6" />
+          <div className="rule-pesqueiro h-px w-16 mb-6" />
           <p className="text-pitaua-paper/70 text-lg max-w-xl leading-relaxed font-light mb-10">
             {hero.subtitle}
           </p>
