@@ -1,4 +1,4 @@
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { gastronomiaContent } from "@/lib/content/gastronomia";
 
@@ -14,16 +14,23 @@ export function GaleriaSection() {
           className="mb-12"
         />
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-          {galeria.imagePlaceholders.map((label, i) => (
-            <ImagePlaceholder
-              key={i}
-              label={label}
-              aspectRatio={i === 0 ? "video" : "square"}
-              className={`rounded-2xl ${i === 0 ? "col-span-2 sm:col-span-1 sm:row-span-2" : ""}`}
-            />
+        <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+          {galeria.imagens.map((img, i) => (
+            <li
+              key={img.src}
+              className="relative aspect-square overflow-hidden rounded-2xl bg-pitaua-surface shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                loading={i < 4 ? "eager" : "lazy"}
+                className="object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

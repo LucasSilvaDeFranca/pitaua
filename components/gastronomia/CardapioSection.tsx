@@ -1,26 +1,38 @@
 "use client";
 
 import { useState } from "react";
-import { Eye, EyeOff } from "lucide-react";
+import Image from "next/image";
+import {
+  Drumstick,
+  Salad,
+  Soup,
+  Cake,
+  Eye,
+  UtensilsCrossed,
+  ImageIcon,
+  type LucideIcon,
+} from "lucide-react";
+import { Modal } from "@/components/ui/Modal";
+import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { gastronomiaContent, type MenuItem } from "@/lib/content/gastronomia";
+import { getWhatsAppLink, PHONES } from "@/lib/constants";
+import {
+  gastronomiaContent,
+  type MenuItem,
+  type MenuSecao,
+} from "@/lib/content/gastronomia";
+
+const secaoIcones: Record<string, LucideIcon> = {
+  porcoes: Drumstick,
+  saladas: Salad,
+  pratos: Soup,
+  sobremesa: Cake,
+};
 
 export function CardapioSection() {
   const { cardapio } = gastronomiaContent;
   const [activeSecao, setActiveSecao] = useState(cardapio.secoes[0].id);
-  const [revealed, setRevealed] = useState<Set<string>>(new Set());
-
-  const toggleReveal = (itemKey: string) => {
-    setRevealed((prev) => {
-      const next = new Set(prev);
-      if (next.has(itemKey)) {
-        next.delete(itemKey);
-      } else {
-        next.add(itemKey);
-      }
-      return next;
-    });
-  };
+  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
 
   const secaoAtiva =
     cardapio.secoes.find((s) => s.id === activeSecao) ?? cardapio.secoes[0];
@@ -84,20 +96,16 @@ export function CardapioSection() {
           aria-labelledby={`tab-${secaoAtiva.id}`}
           className="animate-fade-in"
         >
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {secaoAtiva.itens.map((item, i) => {
-              const itemKey = `${secaoAtiva.id}-${i}`;
-              const isRevealed = revealed.has(itemKey);
-              return (
-                <li key={itemKey}>
-                  <MenuCard
-                    item={item}
-                    revealed={isRevealed}
-                    onToggle={() => toggleReveal(itemKey)}
-                  />
-                </li>
-              );
-            })}
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {secaoAtiva.itens.map((item, i) => (
+              <li key={`${secaoAtiva.id}-${i}`}>
+                <MenuCard
+                  item={item}
+                  secao={secaoAtiva}
+                  onOpen={() => setSelectedItem(item)}
+                />
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -105,69 +113,195 @@ export function CardapioSection() {
           {cardapio.nota}
         </p>
       </div>
+
+      <MenuItemDetailsModal
+        item={selectedItem}
+        secaoId={secaoAtiva.id}
+        onClose={() => setSelectedItem(null)}
+      />
     </section>
   );
 }
 
 function MenuCard({
   item,
-  revealed,
-  onToggle,
+  secao,
+  onOpen,
 }: {
   item: MenuItem;
-  revealed: boolean;
-  onToggle: () => void;
+  secao: MenuSecao;
+  onOpen: () => void;
 }) {
+  const Icon = secaoIcones[secao.id] ?? UtensilsCrossed;
+
   return (
-    <article className="group h-full flex flex-col p-5 bg-white border border-pitaua-rule rounded-2xl transition-all duration-300 hover:border-pitaua-earth/50 hover:shadow-md">
-      <div className="flex-1">
-        <h3 className="font-heading text-xl text-pitaua-dark leading-snug mb-1">
-          {item.nome}
-        </h3>
-        {item.porcao && (
-          <p className="text-[11px] font-medium tracking-wider uppercase text-pitaua-earth mb-2">
-            {item.porcao}
-          </p>
+    <article className="group h-full flex flex-col bg-pitaua-surface border border-pitaua-border/40 rounded-2xl overflow-hidden transition-all duration-300 hover:border-pitaua-earth/60 hover:shadow-xl hover:-translate-y-0.5">
+      {/* Imagem ou placeholder */}
+      <div className="relative aspect-[4/3] overflow-hidden">
+        {item.imagem ? (
+          <Image
+            src={item.imagem}
+            alt={item.nome}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div
+            className="image-placeholder w-full h-full"
+            role="img"
+            aria-label={`Foto de ${item.nome} (em breve)`}
+          >
+            <ImageIcon size={28} className="mb-2 opacity-30" aria-hidden />
+            <span className="text-[11px] opacity-50">Foto em breve</span>
+          </div>
         )}
+
+        {/* Gradiente para legibilidade do botão */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"
+          aria-hidden
+        />
+
+        {/* Botão Ver detalhes (clica em qualquer parte do card também) */}
+        <button
+          type="button"
+          onClick={onOpen}
+          aria-label={`Ver detalhes de ${item.nome}`}
+          className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/95 hover:bg-white text-pitaua-ink text-xs font-medium rounded-full shadow-md backdrop-blur-sm transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-earth focus-visible:ring-offset-2"
+        >
+          <Eye size={13} aria-hidden />
+          Ver detalhes
+        </button>
+      </div>
+
+      {/* Conteúdo */}
+      <div className="flex-1 p-5">
+        <div className="flex items-start gap-3 mb-2">
+          <span
+            className="shrink-0 w-9 h-9 rounded-md bg-pitaua-earth/15 text-pitaua-earth flex items-center justify-center"
+            aria-hidden
+          >
+            <Icon size={18} />
+          </span>
+          <div className="min-w-0 flex-1">
+            <h3 className="font-heading text-lg text-pitaua-paper leading-snug">
+              {item.nome}
+            </h3>
+            {item.porcao && (
+              <p className="text-[10px] font-medium tracking-wider uppercase text-pitaua-earth mt-0.5">
+                {item.porcao}
+              </p>
+            )}
+          </div>
+        </div>
+
         {item.descricao && (
-          <p className="text-sm text-pitaua-dark/60 leading-relaxed">
+          <p className="text-sm text-pitaua-paper/65 leading-relaxed">
             {item.descricao}
           </p>
         )}
       </div>
-
-      <div className="mt-4 pt-4 border-t border-pitaua-rule/60">
-        <button
-          type="button"
-          onClick={onToggle}
-          aria-expanded={revealed}
-          aria-label={
-            revealed
-              ? `Ocultar preço de ${item.nome}`
-              : `Ver preço de ${item.nome}`
-          }
-          className="w-full flex items-center justify-between gap-2 text-sm font-medium text-pitaua-dark/70 hover:text-pitaua-brick transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-brick focus-visible:ring-offset-2 rounded-md"
-        >
-          {revealed ? (
-            <>
-              <span className="flex items-baseline gap-1.5 text-pitaua-brick font-semibold">
-                {item.precoApartirDe && (
-                  <span className="text-[10px] uppercase tracking-wider text-pitaua-dark/50 font-normal">
-                    A partir de
-                  </span>
-                )}
-                <span className="text-base">{item.preco}</span>
-              </span>
-              <EyeOff size={15} aria-hidden className="text-pitaua-dark/40" />
-            </>
-          ) : (
-            <>
-              <span>Ver preço</span>
-              <Eye size={15} aria-hidden className="text-pitaua-dark/40 group-hover:text-pitaua-brick transition-colors" />
-            </>
-          )}
-        </button>
-      </div>
     </article>
+  );
+}
+
+function MenuItemDetailsModal({
+  item,
+  secaoId,
+  onClose,
+}: {
+  item: MenuItem | null;
+  secaoId: string;
+  onClose: () => void;
+}) {
+  if (!item) return null;
+  const Icon = secaoIcones[secaoId] ?? UtensilsCrossed;
+  const restauranteWhats =
+    PHONES.find((p) => p.label === "Pesqueiro e Restaurante")?.whatsapp;
+  const whatsappMsg = `Olá! Gostaria de saber mais sobre o prato "${item.nome}" do restaurante Pitauá.`;
+
+  return (
+    <Modal open onClose={onClose} ariaLabel={`Detalhes do prato ${item.nome}`}>
+      <div className="grid md:grid-cols-2">
+        {/* Imagem */}
+        <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[420px] bg-pitaua-surface">
+          {item.imagem ? (
+            <Image
+              src={item.imagem}
+              alt={item.nome}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              priority
+            />
+          ) : (
+            <div
+              className="image-placeholder w-full h-full"
+              role="img"
+              aria-label={`Foto de ${item.nome} (em breve)`}
+            >
+              <ImageIcon size={36} className="mb-3 opacity-30" aria-hidden />
+              <span className="text-xs opacity-50">Foto em breve</span>
+            </div>
+          )}
+        </div>
+
+        {/* Detalhes */}
+        <div className="p-7 sm:p-9 flex flex-col">
+          <div className="flex items-start gap-3 mb-4">
+            <span
+              className="shrink-0 w-11 h-11 rounded-md bg-pitaua-earth/15 text-pitaua-earth flex items-center justify-center"
+              aria-hidden
+            >
+              <Icon size={22} />
+            </span>
+            <div>
+              <h2 className="font-heading text-2xl sm:text-3xl text-pitaua-ink italic leading-tight">
+                {item.nome}
+              </h2>
+              {item.porcao && (
+                <p className="text-[11px] font-medium tracking-wider uppercase text-pitaua-earth mt-1.5">
+                  {item.porcao}
+                </p>
+              )}
+            </div>
+          </div>
+
+          {item.descricao && (
+            <p className="text-pitaua-dark/70 leading-relaxed mb-6">
+              {item.descricao}
+            </p>
+          )}
+
+          <div className="mt-auto pt-6 border-t border-pitaua-rule">
+            <div className="flex items-baseline gap-2 mb-5">
+              {item.precoApartirDe && (
+                <span className="text-[11px] uppercase tracking-wider text-pitaua-dark/50">
+                  A partir de
+                </span>
+              )}
+              <span className="font-heading text-3xl text-pitaua-brick">
+                {item.preco}
+              </span>
+            </div>
+
+            <Button
+              href={getWhatsAppLink(whatsappMsg, restauranteWhats)}
+              variant="secondary"
+              size="md"
+              external
+              showWhatsAppIcon
+              className="w-full"
+            >
+              Pedir pelo WhatsApp
+            </Button>
+            <p className="mt-3 text-[11px] text-pitaua-dark/50 text-center italic">
+              Preços e disponibilidade sujeitos a alteração
+            </p>
+          </div>
+        </div>
+      </div>
+    </Modal>
   );
 }

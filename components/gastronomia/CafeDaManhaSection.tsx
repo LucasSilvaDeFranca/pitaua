@@ -1,4 +1,4 @@
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { gastronomiaContent } from "@/lib/content/gastronomia";
 import { CheckCircle2 } from "lucide-react";
@@ -30,11 +30,15 @@ export function CafeDaManhaSection() {
             </ul>
           </div>
 
-          <ImagePlaceholder
-            label={cafeManha.imagePlaceholder}
-            aspectRatio="square"
-            className="rounded-2xl"
-          />
+          <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/gastronomia/cafe-da-manha.jpg"
+              alt="Café da manhã da Pousada Pitauá em Socorro-SP — cestas com pães de queijo, broinhas, bolos caseiros e doces artesanais"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

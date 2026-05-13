@@ -1,0 +1,18 @@
+[     400ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[     467ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[    7158ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[    7159ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   51008ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   51009ms] [LOG] [Fast Refresh] done in 106ms @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   73583ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   73584ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   78935ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   79087ms] [LOG] [Fast Refresh] done in 222ms @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   79236ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   79647ms] [LOG] [Fast Refresh] done in 516ms @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   79793ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   79842ms] [LOG] [Fast Refresh] done in 151ms @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   80025ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   80086ms] [LOG] [Fast Refresh] done in 164ms @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   97318ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431
+[   97338ms] [LOG] [Fast Refresh] done in 123ms @ http://localhost:3000/_next/static/chunks/0fee_next_dist_005uovt._.js:2431

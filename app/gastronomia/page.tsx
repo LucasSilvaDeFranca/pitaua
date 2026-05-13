@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { HeroGastronomia } from "@/components/gastronomia/HeroGastronomia";
 import { RestauranteSection } from "@/components/gastronomia/RestauranteSection";
-import { CardapioSection } from "@/components/gastronomia/CardapioSection";
 import { CafeDaManhaSection } from "@/components/gastronomia/CafeDaManhaSection";
 import { GaleriaSection } from "@/components/gastronomia/GaleriaSection";
 import { Button } from "@/components/ui/Button";
@@ -33,7 +32,6 @@ export default function GastronomiaPage() {
 
       <HeroGastronomia />
       <RestauranteSection />
-      <CardapioSection />
       <CafeDaManhaSection />
       <GaleriaSection />
 

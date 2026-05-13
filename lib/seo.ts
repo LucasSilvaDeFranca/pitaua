@@ -60,7 +60,7 @@ export const jsonLdGastronomia = buildJsonLd("Restaurant", {
   description:
     "Restaurante com gastronomia regional em Socorro-SP. Café da manhã incluso e almoço com pratos do interior paulista.",
   servesCuisine: ["Brazilian", "Regional"],
-  hasMenu: SITE_URL + "/gastronomia",
+  hasMenu: SITE_URL + "/gastronomia/cardapio",
 });
 
 export const jsonLdPesqueiro = buildJsonLd("SportsActivityLocation", {

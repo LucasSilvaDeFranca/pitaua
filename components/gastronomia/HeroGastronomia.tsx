@@ -1,5 +1,17 @@
 import { getWhatsAppLink, WHATSAPP_MESSAGES } from "@/lib/constants";
 import { gastronomiaContent } from "@/lib/content/gastronomia";
+import { HeroSlideshow } from "@/components/shared/HeroSlideshow";
+
+const heroImages = [
+  {
+    src: "/images/gastronomia/hero/porcao.jpg",
+    alt: "Porção típica do Restaurante Pitauá em Socorro-SP servida em mesa de madeira",
+  },
+  {
+    src: "/images/gastronomia/hero/vista.jpg",
+    alt: "Vista do Restaurante Pitauá em Socorro-SP — espaço integrado à natureza",
+  },
+];
 
 export function HeroGastronomia() {
   const { hero } = gastronomiaContent;
@@ -9,15 +21,7 @@ export function HeroGastronomia() {
       className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-pitaua-ink grain-overlay"
       aria-label="Gastronomia Pitauá"
     >
-      {/*
-        SUBSTITUIR por imagem real:
-        <Image src="/images/gastronomia/hero-gastronomia.jpg"
-          alt="Restaurante Pitauá em Socorro-SP"
-          fill className="object-cover opacity-40" priority sizes="100vw"
-        />
-        Placeholder: {hero.imagePlaceholder}
-      */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pitaua-brick/40 via-pitaua-ink to-pitaua-surface" aria-hidden />
+      <HeroSlideshow images={heroImages} intervalMs={5500} />
       <div className="hero-overlay absolute inset-0" aria-hidden />
 
       <div className="relative z-10 px-6 sm:px-10 pb-20 pt-36 max-w-7xl mx-auto w-full">

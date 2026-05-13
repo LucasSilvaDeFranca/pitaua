@@ -4,6 +4,7 @@ export type MenuItem = {
   porcao?: string;
   preco: string;
   precoApartirDe?: boolean;
+  imagem?: string;
 };
 
 export type MenuSecao = {
@@ -50,7 +51,7 @@ export const gastronomiaContent = {
     title: "Restaurante",
     subtitle: "Pratos que contam histórias",
     description:
-      "Nosso restaurante serve almoços com cardápio regional, valorizando os ingredientes locais e as receitas que fazem parte da cultura do interior paulista. O ambiente é perfeito para reunir a família ou confraternizar com amigos em meio à natureza.",
+      "Nosso restaurante serve almoços com cardápio regional e é aberto ao público, valorizando os ingredientes locais e as receitas que fazem parte da cultura do interior paulista. O ambiente é perfeito para reunir a família ou confraternizar com amigos em meio à natureza.",
     horario: "Almoço: domingos e feriados / Consulte disponibilidade para outros dias",
     imagePlaceholder:
       "IMAGEM: Prato principal servido no restaurante — apresentação cuidadosa, ambiente ao fundo",
@@ -202,13 +203,23 @@ export const gastronomiaContent = {
   },
   galeria: {
     title: "Um ambiente para boas lembranças",
-    imagePlaceholders: [
-      "IMAGEM: Interior do restaurante — mesas e decoração",
-      "IMAGEM: Prato principal elaborado",
-      "IMAGEM: Café da manhã em destaque",
-      "IMAGEM: Área externa do restaurante ou varanda",
-      "IMAGEM: Detalhes da decoração — objetos rústicos, flores",
-      "IMAGEM: Equipe ou cozinha (opcional)",
+    imagens: [
+      { src: "/images/gastronomia/galeria/espaco-01.jpg", alt: "Ambiente do Restaurante Pitauá em Socorro-SP — mesas e decoração rústica" },
+      { src: "/images/gastronomia/galeria/drinks-01.jpg", alt: "Drink autoral servido no Restaurante Pitauá" },
+      { src: "/images/gastronomia/galeria/musica-ao-vivo.jpg", alt: "Música ao vivo no Restaurante Pitauá em Socorro-SP" },
+      { src: "/images/gastronomia/galeria/espaco-02.jpg", alt: "Detalhes do espaço do Restaurante Pitauá" },
+      { src: "/images/gastronomia/galeria/drinks-02.jpg", alt: "Drink artesanal — Restaurante Pitauá Socorro-SP" },
+      { src: "/images/gastronomia/galeria/ambiente-01.webp", alt: "Vista interna acolhedora do Restaurante Pitauá" },
+      { src: "/images/gastronomia/galeria/espaco-03.jpg", alt: "Espaço do Restaurante Pitauá em Socorro-SP" },
+      { src: "/images/gastronomia/galeria/drinks-03.jpg", alt: "Coquetel servido no Restaurante Pitauá" },
+      { src: "/images/gastronomia/galeria/drinks-04.jpg", alt: "Drink frio em ambiente rústico do Restaurante Pitauá" },
+      { src: "/images/gastronomia/galeria/ambiente-02.webp", alt: "Ambiente acolhedor do Restaurante Pitauá" },
+      { src: "/images/gastronomia/galeria/restaurante-geral.jpg", alt: "Visão geral do Restaurante Pitauá em Socorro-SP" },
+      { src: "/images/gastronomia/galeria/drinks-05.jpg", alt: "Drinks variados do Restaurante Pitauá" },
+      { src: "/images/gastronomia/galeria/espaco-04.jpg", alt: "Detalhes gastronômicos do Restaurante Pitauá" },
+      { src: "/images/gastronomia/galeria/restaurante-vista.jpg", alt: "Vista lateral do Restaurante Pitauá em Socorro" },
+      { src: "/images/gastronomia/galeria/menu.webp", alt: "Cardápio do Restaurante Pitauá em Socorro-SP" },
+      { src: "/images/gastronomia/galeria/espaco-05.jpg", alt: "Ambiente interno do Restaurante Pitauá" },
     ],
   },
   eventos: {
