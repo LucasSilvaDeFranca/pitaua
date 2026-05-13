@@ -23,9 +23,11 @@ export function AboutSection() {
               {about.title}
             </h2>
             <div className="gold-rule w-16 mb-8" />
-            <p className="text-pitaua-dark/65 text-lg leading-relaxed font-light">
-              {about.text}
-            </p>
+            <div className="space-y-6 text-pitaua-dark/65 text-lg leading-relaxed font-light">
+              {about.text.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
           </div>
 
           {/* Right: stats as editorial blocks */}

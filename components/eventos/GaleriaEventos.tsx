@@ -1,4 +1,4 @@
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { eventosContent } from "@/lib/content/eventos";
 
@@ -14,13 +14,19 @@ export function GaleriaEventos() {
           className="mb-12"
         />
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-          {galeria.imagePlaceholders.map((label, i) => (
-            <ImagePlaceholder
-              key={i}
-              label={label}
-              aspectRatio="square"
-              className="rounded-2xl"
-            />
+          {galeria.images.map((img) => (
+            <div
+              key={img.src}
+              className="relative aspect-square overflow-hidden rounded-2xl bg-pitaua-ink/5 group"
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(max-width: 640px) 50vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+              />
+            </div>
           ))}
         </div>
       </div>

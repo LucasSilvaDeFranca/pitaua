@@ -33,11 +33,11 @@
   --color-pitaua-ochre:       #C7893E;   /* alias de earth (alinhado ao oficial) */
   --color-pitaua-earth-light: #D47E00;   /* alias do orange — hover do bronze */
 
-  /* ─── Fontes ─── */
+  /* ─── Fontes (Tipologia oficial do branding book) ─── */
   --font-logo:    var(--font-antonio), "Antonio", "Oswald", "Bebas Neue", sans-serif;
-  --font-display: var(--font-display), "Cinzel", "Trajan Pro", Georgia, serif;
+  --font-display: var(--font-display), "Trajan Pro", Georgia, serif;
   --font-heading: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
-  --font-script:  var(--font-script), "Petit Formal Script", "Pinyon Script", cursive;
+  --font-script:  var(--font-script), "DirtyBitch", "Petit Formal Script", cursive;
   --font-body:    var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
 
   /* ─── Animações ─── */

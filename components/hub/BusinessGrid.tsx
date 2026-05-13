@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { hubContent } from "@/lib/content/hub";
 
 // Cores oficiais por seção (Branding Book Pitauá).
@@ -60,7 +61,14 @@ export function BusinessGrid() {
                 data-section={cfg.section}
                 className="business-card group relative overflow-hidden rounded-2xl min-h-[200px] sm:min-h-[260px] flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-earth"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.bg} transition-transform duration-700 group-hover:scale-105`} aria-hidden />
+                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.bg}`} aria-hidden />
+                <Image
+                  src={biz.image}
+                  alt={biz.alt}
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
                 <div className="business-card-overlay absolute inset-0" aria-hidden />
                 <div className="relative z-10 p-4 sm:p-5">
                   <span className="block text-[10px] font-medium tracking-[0.2em] uppercase mb-1.5" style={{ color: cfg.accent }}>
@@ -89,7 +97,15 @@ export function BusinessGrid() {
                 className="business-card group col-span-5 row-span-2 relative overflow-hidden rounded-2xl flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-earth"
                 aria-label={`${biz.title} — ${biz.description}`}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.bg} transition-transform duration-700 group-hover:scale-[1.03]`} aria-hidden />
+                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.bg}`} aria-hidden />
+                <Image
+                  src={biz.image}
+                  alt={biz.alt}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                />
                 <div className="business-card-overlay absolute inset-0" aria-hidden />
                 <div className="relative z-10 p-8">
                   <span className="block text-xs font-medium tracking-[0.2em] uppercase mb-3" style={{ color: cfg.accent }}>
@@ -124,7 +140,14 @@ export function BusinessGrid() {
                 className="business-card group col-span-4 row-span-1 relative overflow-hidden rounded-2xl flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-earth"
                 aria-label={`${biz.title} — ${biz.description}`}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.bg} transition-transform duration-700 group-hover:scale-[1.04]`} aria-hidden />
+                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.bg}`} aria-hidden />
+                <Image
+                  src={biz.image}
+                  alt={biz.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                />
                 <div className="business-card-overlay absolute inset-0" aria-hidden />
                 <div className="relative z-10 p-6">
                   <span className="block text-[10px] font-medium tracking-[0.2em] uppercase mb-2" style={{ color: cfg.accent }}>
@@ -148,7 +171,14 @@ export function BusinessGrid() {
                 className="business-card group col-span-3 row-span-1 relative overflow-hidden rounded-2xl flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-earth"
                 aria-label={`${biz.title} — ${biz.description}`}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.bg} transition-transform duration-700 group-hover:scale-[1.04]`} aria-hidden />
+                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.bg}`} aria-hidden />
+                <Image
+                  src={biz.image}
+                  alt={biz.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                />
                 <div className="business-card-overlay absolute inset-0" aria-hidden />
                 <div className="relative z-10 p-6">
                   <span className="block text-[10px] font-medium tracking-[0.2em] uppercase mb-2" style={{ color: cfg.accent }}>
@@ -172,7 +202,14 @@ export function BusinessGrid() {
                 className="business-card group col-span-7 row-span-1 relative overflow-hidden rounded-2xl flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pitaua-earth"
                 aria-label={`${biz.title} — ${biz.description}`}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.bg} transition-transform duration-700 group-hover:scale-[1.03]`} aria-hidden />
+                <div className={`absolute inset-0 bg-gradient-to-br ${cfg.bg}`} aria-hidden />
+                <Image
+                  src={biz.image}
+                  alt={biz.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 58vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                />
                 <div className="business-card-overlay absolute inset-0" aria-hidden />
                 <div className="relative z-10 p-6 flex items-end justify-between">
                   <div>

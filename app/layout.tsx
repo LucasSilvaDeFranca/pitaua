@@ -1,38 +1,33 @@
 import type { Metadata, Viewport } from "next";
-import {
-  Antonio,
-  Cinzel,
-  Cormorant_Garamond,
-  DM_Sans,
-  Petit_Formal_Script,
-} from "next/font/google";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
-// Antonio Bold — substituto direto do "Antonio Bold" do branding book oficial.
-// Usado em "PITAUÁ" (logotipo wordmark).
-const antonio = Antonio({
+// Branding book — Tipologia da Logomarca.
+// LOGOTIPO: Antonio Bold (variable font cobre todos os pesos em um arquivo).
+const antonio = localFont({
+  src: "./fonts/Antonio-Variable.ttf",
   variable: "--font-antonio",
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: "100 900",
   display: "swap",
 });
 
-// Cinzel — substituto livre do "Trajan Pro" do branding book.
-// Usado em "CENTRO DE LAZER" e outros títulos serif.
-const cinzel = Cinzel({
+// Branding book — TÍTULO: Trajan Pro.
+const trajan = localFont({
+  src: [
+    { path: "./fonts/TrajanPro-Regular.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/TrajanPro-Bold.otf",    weight: "700", style: "normal" },
+  ],
   variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
   display: "swap",
 });
 
-// Petit Formal Script — substituto livre do "DirtyBitch" do branding book.
-// Usado em "Raízes do Interior" (assinatura cursiva).
-const petit = Petit_Formal_Script({
+// Branding book — ASSINATURA: DirtyBitch ("Raízes do Interior").
+const dirtyBitch = localFont({
+  src: "./fonts/DirtyBitch.ttf",
   variable: "--font-script",
-  subsets: ["latin"],
-  weight: ["400"],
+  weight: "400",
   display: "swap",
 });
 
@@ -105,7 +100,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${antonio.variable} ${cinzel.variable} ${petit.variable} ${cormorant.variable} ${dmSans.variable}`}
+      className={`${antonio.variable} ${trajan.variable} ${dirtyBitch.variable} ${cormorant.variable} ${dmSans.variable}`}
       suppressHydrationWarning
     >
       <body className="min-h-screen flex flex-col antialiased">

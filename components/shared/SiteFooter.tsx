@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Mail, MessageCircle } from "lucide-react";
-import { ADDRESS, EMAILS, PHONES, SOCIAL, getWhatsAppLink, WHATSAPP_MESSAGES } from "@/lib/constants";
+import { MapPin, Mail, MessageCircle, Clock } from "lucide-react";
+import { ADDRESS, EMAILS, HOURS, PHONES, SOCIAL, getWhatsAppLink, WHATSAPP_MESSAGES } from "@/lib/constants";
 
 const areaLinks = [
   { label: "Pousada", href: "/pousada" },
@@ -91,35 +91,64 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          {/* Telefones */}
-          <div>
-            <h3 className="text-[10px] font-medium uppercase tracking-[0.2em] text-pitaua-muted mb-5">
-              Telefones
-            </h3>
-            <ul className="space-y-3">
-              {PHONES.map((p) => (
-                <li key={p.whatsapp}>
-                  <a
-                    href={getWhatsAppLink(WHATSAPP_MESSAGES.geral, p.whatsapp)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-start gap-2.5 text-pitaua-ink/65 hover:text-pitaua-ink text-sm font-light transition-colors"
-                  >
-                    <MessageCircle
-                      size={13}
-                      aria-hidden
-                      className="text-[#25D366] shrink-0 mt-1"
-                    />
-                    <span className="flex flex-col">
-                      <span>{p.display}</span>
-                      <span className="text-[10px] uppercase tracking-wider text-pitaua-ink/40">
-                        {p.label}
+          {/* Telefones + Horários */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-[10px] font-medium uppercase tracking-[0.2em] text-pitaua-muted mb-5">
+                Telefones
+              </h3>
+              <ul className="space-y-3">
+                {PHONES.map((p) => (
+                  <li key={p.whatsapp}>
+                    <a
+                      href={getWhatsAppLink(WHATSAPP_MESSAGES.geral, p.whatsapp)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start gap-2.5 text-pitaua-ink/65 hover:text-pitaua-ink text-sm font-light transition-colors"
+                    >
+                      <MessageCircle
+                        size={13}
+                        aria-hidden
+                        className="text-[#25D366] shrink-0 mt-1"
+                      />
+                      <span className="flex flex-col">
+                        <span>{p.display}</span>
+                        <span className="text-[10px] uppercase tracking-wider text-pitaua-ink/40">
+                          {p.label}
+                        </span>
                       </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-[10px] font-medium uppercase tracking-[0.2em] text-pitaua-muted mb-5">
+                Horários
+              </h3>
+              <ul className="space-y-3">
+                {HOURS.map((h) => (
+                  <li
+                    key={h.label}
+                    className="flex items-start gap-2.5 text-pitaua-ink/65 text-sm font-light"
+                  >
+                    <Clock size={13} aria-hidden className="shrink-0 mt-1" />
+                    <span className="flex flex-col">
+                      <span className="text-[10px] uppercase tracking-wider text-pitaua-ink/40">
+                        {h.label}
+                      </span>
+                      <span>{h.schedule}</span>
+                      {"note" in h && h.note ? (
+                        <span className="text-[10px] uppercase tracking-wider text-pitaua-ink/40 mt-0.5">
+                          {h.note}
+                        </span>
+                      ) : null}
                     </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* E-mails + Localização */}

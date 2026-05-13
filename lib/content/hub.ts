@@ -6,10 +6,14 @@ export const hubContent = {
   },
   about: {
     title: "O Pitauá",
-    text: "Em meio às serras e à natureza exuberante de Socorro-SP, o Pitauá é muito mais do que uma pousada. É um centro de lazer completo onde cada visita se torna uma experiência inesquecível. Aqui você encontra acomodações confortáveis, gastronomia saborosa, pesca esportiva e espaços para celebrar momentos especiais — tudo em um único lugar, rodeado de verde e tranquilidade.",
+    text: [
+      "Em meio às serras e à natureza exuberante de Socorro, o Pitauá é um centro de lazer completo pensado para quem busca descanso, diversão, gastronomia e contato com a natureza em um só lugar. Muito mais do que uma pousada, o espaço reúne restaurante, pesqueiro, hospedagem, piscina, mini fazenda e estrutura para eventos, proporcionando experiências para famílias, casais, grupos e visitantes de toda a região.",
+      "No Pitauá, você pode aproveitar a tranquilidade do interior, saborear pratos especiais no restaurante, viver momentos de lazer no pesqueiro, descansar em acomodações confortáveis e celebrar ocasiões especiais em um ambiente cercado pelo verde e pela atmosfera acolhedora de Socorro-SP.",
+      "Seja para passar o dia, se hospedar, pescar, realizar eventos, aproveitar a gastronomia local ou viver momentos em família, o Pitauá oferece uma experiência completa de lazer e turismo rural em Socorro.",
+    ],
     stats: [
       { value: "15", label: "Quartos" },
-      { value: "2", label: "Lagos de Pesca" },
+      { value: "1", label: "Lago de Pesca" },
       { value: "4", label: "Frentes de Lazer" },
     ],
   },
@@ -27,7 +31,8 @@ export const hubContent = {
       title: "Pousada",
       description: "15 quartos, piscina e café da manhã incluso",
       href: "/pousada",
-      imagePlaceholder: "IMAGEM: Vista dos quartos ou área da pousada com natureza ao fundo",
+      image: "/images/hub/pousada-pitaua-socorro-sp.png",
+      alt: "Pousada Pitauá em Socorro-SP",
       cta: "Reserve sua estadia",
     },
     {
@@ -35,7 +40,8 @@ export const hubContent = {
       title: "Gastronomia",
       description: "Sabores do interior em ambiente acolhedor",
       href: "/gastronomia",
-      imagePlaceholder: "IMAGEM: Prato típico ou ambiente do restaurante",
+      image: "/images/hub/restaurante-pitaua-socorro-sp.jpg",
+      alt: "Restaurante Pitauá em Socorro-SP",
       cta: "Conheça o restaurante",
     },
     {
@@ -43,7 +49,8 @@ export const hubContent = {
       title: "Pesqueiro",
       description: "Pesca esportiva em contato com a natureza",
       href: "/pesqueiro",
-      imagePlaceholder: "IMAGEM: Lago de pesca com natureza ao redor",
+      image: "/images/hub/pesqueiro-pitaua-socorro-sp.jpg",
+      alt: "Dia de pescaria no Pesqueiro Pitauá em Socorro",
       cta: "Venha pescar",
     },
     {
@@ -51,7 +58,8 @@ export const hubContent = {
       title: "Eventos",
       description: "Celebre momentos especiais em plena natureza",
       href: "/eventos",
-      imagePlaceholder: "IMAGEM: Espaço de eventos decorado ou ao ar livre",
+      image: "/images/hub/eventos-casamento-pitaua-socorro-sp.jpg",
+      alt: "Eventos e casamentos no Pitauá em Socorro-SP",
       cta: "Solicite orçamento",
     },
   ],

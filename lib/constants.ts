@@ -26,15 +26,23 @@ export const FLOAT_WHATSAPP = "5519997444578";
 // Lista completa de canais de contato — usada no footer.
 export const PHONES = [
   { label: "Pousada", display: "(19) 99607-3390", whatsapp: "5519996073390" },
-  { label: "Restaurante", display: "(19) 99744-4578", whatsapp: "5519997444578" },
-  { label: "Reservas", display: "(19) 99941-9549", whatsapp: "5519999419549" },
+  { label: "Pesqueiro e Restaurante", display: "(19) 99744-4578", whatsapp: "5519997444578" },
 ] as const;
 
 export const EMAILS = [
-  { label: "Reservas", address: "reservas@pitaua.com.br" },
-  { label: "Geral", address: "contato@pitaua.com.br" },
-  { label: "Pousada", address: "pousadapitaua@gmail.com" },
-  { label: "Restaurante", address: "pitauasocorro@gmail.com" },
+  { label: "Contato", address: "pousadapitaua@gmail.com" },
+] as const;
+
+export const HOURS = [
+  {
+    label: "Restaurante",
+    schedule: "Quarta a Domingo: 11h às 16h",
+  },
+  {
+    label: "Pesqueiro",
+    schedule: "Quarta a Domingo: 08h às 18h",
+    note: "01 lago de pesca",
+  },
 ] as const;
 
 export const ADDRESS = {

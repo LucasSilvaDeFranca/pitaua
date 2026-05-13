@@ -1,4 +1,4 @@
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { eventosContent } from "@/lib/content/eventos";
 import { CheckCircle2, Users, Music, ChefHat, ParkingCircle, Wifi, Trees, Waves, Fish } from "lucide-react";
@@ -50,13 +50,21 @@ export function EstruturaEventosSection() {
           </div>
 
           <div className="space-y-4">
-            {estrutura.imagePlaceholders.map((label, i) => (
-              <ImagePlaceholder
-                key={i}
-                label={label}
-                aspectRatio={i === 0 ? "video" : "wide"}
-                className="rounded-2xl"
-              />
+            {estrutura.images.map((img, i) => (
+              <div
+                key={img.src}
+                className={`relative w-full overflow-hidden rounded-2xl bg-pitaua-ink/5 ${
+                  i === 0 ? "aspect-video" : "aspect-[21/9]"
+                }`}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
             ))}
           </div>
         </div>

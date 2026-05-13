@@ -1,5 +1,21 @@
 import { getWhatsAppLink, WHATSAPP_MESSAGES } from "@/lib/constants";
 import { eventosContent } from "@/lib/content/eventos";
+import { HeroSlideshow } from "@/components/shared/HeroSlideshow";
+
+const heroImages = [
+  {
+    src: "/images/eventos/hero/eventos-pitaua-socorro.jpg",
+    alt: "Eventos no Pitauá em Socorro",
+  },
+  {
+    src: "/images/eventos/hero/eventos-pitaua-socorro-sp.jpg",
+    alt: "Espaço para eventos no Pitauá em Socorro-SP",
+  },
+  {
+    src: "/images/eventos/hero/eventos-casamento-pitaua-socorro-sp.jpg",
+    alt: "Casamento no Pitauá em Socorro-SP",
+  },
+];
 
 export function HeroEventos() {
   const { hero } = eventosContent;
@@ -9,15 +25,7 @@ export function HeroEventos() {
       className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-pitaua-ink grain-overlay"
       aria-label="Eventos Pitauá"
     >
-      {/*
-        SUBSTITUIR por imagem real:
-        <Image src="/images/eventos/hero-eventos.jpg"
-          alt="Espaço para eventos no Pitauá em Socorro-SP"
-          fill className="object-cover opacity-40" priority sizes="100vw"
-        />
-        Placeholder: {hero.imagePlaceholder}
-      */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pitaua-sun/15 via-pitaua-ink to-pitaua-surface" aria-hidden />
+      <HeroSlideshow images={heroImages} intervalMs={5500} />
       <div className="hero-overlay absolute inset-0" aria-hidden />
 
       <div className="relative z-10 px-6 sm:px-10 pb-20 pt-36 max-w-7xl mx-auto w-full">

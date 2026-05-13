@@ -1,0 +1,415 @@
+- generic [active] [ref=e1]:
+  - link "Pular para o conteúdo" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Voltar ao início — Pitauá" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img [ref=e8]
+          - img "Pitauá Centro de Lazer" [ref=e10]
+        - generic [ref=e11]: /
+        - generic [ref=e12]: Gastronomia
+      - navigation "Navegação das áreas" [ref=e13]:
+        - link "Pousada" [ref=e14] [cursor=pointer]:
+          - /url: /pousada
+        - link "Gastronomia" [ref=e15] [cursor=pointer]:
+          - /url: /gastronomia
+        - link "Pesqueiro" [ref=e16] [cursor=pointer]:
+          - /url: /pesqueiro
+        - link "Eventos" [ref=e17] [cursor=pointer]:
+          - /url: /eventos
+  - main [ref=e18]:
+    - region "Gastronomia Pitauá" [ref=e19]:
+      - generic [ref=e23]:
+        - paragraph [ref=e24]: Gastronomia · Socorro-SP
+        - heading "Gastronomia com alma de interior" [level=1] [ref=e25]
+        - paragraph [ref=e27]: Sabores autênticos preparados com carinho em Socorro-SP
+        - link "Fale conosco" [ref=e28] [cursor=pointer]:
+          - /url: https://wa.me/5519996073390?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20restaurante%20do%20Pitau%C3%A1.
+    - region [ref=e29]:
+      - generic [ref=e31]:
+        - heading "Uma experiência gastronômica completa" [level=2] [ref=e32]
+        - paragraph [ref=e33]: No Pitauá, a gastronomia é parte essencial da experiência. Nosso restaurante funciona em um ambiente acolhedor e rústico, onde os sabores do interior paulista chegam à mesa com qualidade e carinho. Do café da manhã reforçado ao almoço com pratos regionais, cada refeição é uma nova razão para voltar.
+    - region [ref=e35]:
+      - generic [ref=e37]:
+        - 'img "IMAGEM: Prato principal servido no restaurante — apresentação cuidadosa, ambiente ao fundo" [ref=e38]':
+          - img [ref=e39]
+          - generic [ref=e43]: "📷 IMAGEM: Prato principal servido no restaurante — apresentação cuidadosa, ambiente ao fundo"
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - heading "Restaurante" [level=2] [ref=e46]
+            - paragraph [ref=e47]: Pratos que contam histórias
+          - paragraph [ref=e49]: Nosso restaurante serve almoços com cardápio regional, valorizando os ingredientes locais e as receitas que fazem parte da cultura do interior paulista. O ambiente é perfeito para reunir a família ou confraternizar com amigos em meio à natureza.
+          - generic [ref=e50]:
+            - img [ref=e51]
+            - generic [ref=e54]: "Almoço: domingos e feriados / Consulte disponibilidade para outros dias"
+          - link "Ver cardápio completo" [ref=e55] [cursor=pointer]:
+            - /url: "#cardapio"
+            - img [ref=e56]
+            - text: Ver cardápio completo
+    - region "Cardápio do Restaurante Sabores do interior paulista, à la carte" [ref=e61]:
+      - generic [ref=e62]:
+        - generic [ref=e64]:
+          - heading "Cardápio do Restaurante" [level=2] [ref=e65]
+          - paragraph [ref=e66]: Sabores do interior paulista, à la carte
+        - tablist "Seções do cardápio" [ref=e68]:
+          - tab "Porções26" [selected] [ref=e69] [cursor=pointer]
+          - tab "Saladas4" [ref=e70] [cursor=pointer]
+          - tab "Pratos à La Carte12" [ref=e71] [cursor=pointer]
+          - tab "Sobremesa2" [ref=e72] [cursor=pointer]
+        - tabpanel "Porções26" [ref=e73]:
+          - list [ref=e74]:
+            - listitem [ref=e75]:
+              - article [ref=e76]:
+                - heading "Amendoim" [level=3] [ref=e78]
+                - button "Ver preço de Amendoim" [ref=e80] [cursor=pointer]:
+                  - generic [ref=e81]: Ver preço
+                  - img [ref=e82]
+            - listitem [ref=e85]:
+              - article [ref=e86]:
+                - heading "Azeitona" [level=3] [ref=e88]
+                - button "Ver preço de Azeitona" [ref=e90] [cursor=pointer]:
+                  - generic [ref=e91]: Ver preço
+                  - img [ref=e92]
+            - listitem [ref=e95]:
+              - article [ref=e96]:
+                - generic [ref=e97]:
+                  - heading "Batata Frita" [level=3] [ref=e98]
+                  - paragraph [ref=e99]: 500gr
+                - button "Ver preço de Batata Frita" [ref=e101] [cursor=pointer]:
+                  - generic [ref=e102]: Ver preço
+                  - img [ref=e103]
+            - listitem [ref=e106]:
+              - article [ref=e107]:
+                - generic [ref=e108]:
+                  - heading "Batata Frita Especial" [level=3] [ref=e109]
+                  - paragraph [ref=e110]: 500gr
+                  - paragraph [ref=e111]: Queijo e Bacon
+                - button "Ver preço de Batata Frita Especial" [ref=e113] [cursor=pointer]:
+                  - generic [ref=e114]: Ver preço
+                  - img [ref=e115]
+            - listitem [ref=e118]:
+              - article [ref=e119]:
+                - generic [ref=e120]:
+                  - heading "Bolinho de Tilápia" [level=3] [ref=e121]
+                  - paragraph [ref=e122]: 12 und.
+                - button "Ver preço de Bolinho de Tilápia" [ref=e124] [cursor=pointer]:
+                  - generic [ref=e125]: Ver preço
+                  - img [ref=e126]
+            - listitem [ref=e129]:
+              - article [ref=e130]:
+                - generic [ref=e131]:
+                  - heading "Bolinha de Queijo" [level=3] [ref=e132]
+                  - paragraph [ref=e133]: 12 und.
+                - button "Ver preço de Bolinha de Queijo" [ref=e135] [cursor=pointer]:
+                  - generic [ref=e136]: Ver preço
+                  - img [ref=e137]
+            - listitem [ref=e140]:
+              - article [ref=e141]:
+                - generic [ref=e142]:
+                  - heading "Ceviche de Tilápia" [level=3] [ref=e143]
+                  - paragraph [ref=e144]: 250gr
+                - button "Ver preço de Ceviche de Tilápia" [ref=e146] [cursor=pointer]:
+                  - generic [ref=e147]: Ver preço
+                  - img [ref=e148]
+            - listitem [ref=e151]:
+              - article [ref=e152]:
+                - generic [ref=e153]:
+                  - heading "Ceviche de Salmão" [level=3] [ref=e154]
+                  - paragraph [ref=e155]: 250gr
+                - button "Ver preço de Ceviche de Salmão" [ref=e157] [cursor=pointer]:
+                  - generic [ref=e158]: Ver preço
+                  - img [ref=e159]
+            - listitem [ref=e162]:
+              - article [ref=e163]:
+                - generic [ref=e164]:
+                  - heading "Costelinha de Porco c/ Barbecue" [level=3] [ref=e165]
+                  - paragraph [ref=e166]: 800gr
+                - button "Ver preço de Costelinha de Porco c/ Barbecue" [ref=e168] [cursor=pointer]:
+                  - generic [ref=e169]: Ver preço
+                  - img [ref=e170]
+            - listitem [ref=e173]:
+              - article [ref=e174]:
+                - generic [ref=e175]:
+                  - heading "Costelinha de Porco c/ Mandioca" [level=3] [ref=e176]
+                  - paragraph [ref=e177]: 400gr proteína + 300gr mandioca
+                - button "Ver preço de Costelinha de Porco c/ Mandioca" [ref=e179] [cursor=pointer]:
+                  - generic [ref=e180]: Ver preço
+                  - img [ref=e181]
+            - listitem [ref=e184]:
+              - article [ref=e185]:
+                - generic [ref=e186]:
+                  - heading "Coxinha" [level=3] [ref=e187]
+                  - paragraph [ref=e188]: 12 und.
+                - button "Ver preço de Coxinha" [ref=e190] [cursor=pointer]:
+                  - generic [ref=e191]: Ver preço
+                  - img [ref=e192]
+            - listitem [ref=e195]:
+              - article [ref=e196]:
+                - generic [ref=e197]:
+                  - heading "Frango à Passarinho" [level=3] [ref=e198]
+                  - paragraph [ref=e199]: 900gr
+                - button "Ver preço de Frango à Passarinho" [ref=e201] [cursor=pointer]:
+                  - generic [ref=e202]: Ver preço
+                  - img [ref=e203]
+            - listitem [ref=e206]:
+              - article [ref=e207]:
+                - generic [ref=e208]:
+                  - heading "Isca de Frango Acebolado" [level=3] [ref=e209]
+                  - paragraph [ref=e210]: 550gr
+                - button "Ver preço de Isca de Frango Acebolado" [ref=e212] [cursor=pointer]:
+                  - generic [ref=e213]: Ver preço
+                  - img [ref=e214]
+            - listitem [ref=e217]:
+              - article [ref=e218]:
+                - generic [ref=e219]:
+                  - heading "Isca de Filé Mignon" [level=3] [ref=e220]
+                  - paragraph [ref=e221]: 500gr
+                - button "Ver preço de Isca de Filé Mignon" [ref=e223] [cursor=pointer]:
+                  - generic [ref=e224]: Ver preço
+                  - img [ref=e225]
+            - listitem [ref=e228]:
+              - article [ref=e229]:
+                - generic [ref=e230]:
+                  - heading "Isca de Tilápia" [level=3] [ref=e231]
+                  - paragraph [ref=e232]: 500gr
+                - button "Ver preço de Isca de Tilápia" [ref=e234] [cursor=pointer]:
+                  - generic [ref=e235]: Ver preço
+                  - img [ref=e236]
+            - listitem [ref=e239]:
+              - article [ref=e240]:
+                - generic [ref=e241]:
+                  - heading "Isca de Tilápia Defumada" [level=3] [ref=e242]
+                  - paragraph [ref=e243]: 500gr
+                - button "Ver preço de Isca de Tilápia Defumada" [ref=e245] [cursor=pointer]:
+                  - generic [ref=e246]: Ver preço
+                  - img [ref=e247]
+            - listitem [ref=e250]:
+              - article [ref=e251]:
+                - generic [ref=e252]:
+                  - heading "Mandioca Frita" [level=3] [ref=e253]
+                  - paragraph [ref=e254]: 600gr
+                - button "Ver preço de Mandioca Frita" [ref=e256] [cursor=pointer]:
+                  - generic [ref=e257]: Ver preço
+                  - img [ref=e258]
+            - listitem [ref=e261]:
+              - article [ref=e262]:
+                - generic [ref=e263]:
+                  - heading "Polenta Frita" [level=3] [ref=e264]
+                  - paragraph [ref=e265]: 500gr
+                - button "Ver preço de Polenta Frita" [ref=e267] [cursor=pointer]:
+                  - generic [ref=e268]: Ver preço
+                  - img [ref=e269]
+            - listitem [ref=e272]:
+              - article [ref=e273]:
+                - generic [ref=e274]:
+                  - heading "Pérolas de Provolone" [level=3] [ref=e275]
+                  - paragraph [ref=e276]: 200gr
+                - button "Ver preço de Pérolas de Provolone" [ref=e278] [cursor=pointer]:
+                  - generic [ref=e279]: Ver preço
+                  - img [ref=e280]
+            - listitem [ref=e283]:
+              - article [ref=e284]:
+                - generic [ref=e285]:
+                  - heading "Torresmo de Rolo" [level=3] [ref=e286]
+                  - paragraph [ref=e287]: 800gr
+                - button "Ver preço de Torresmo de Rolo" [ref=e289] [cursor=pointer]:
+                  - generic [ref=e290]: Ver preço
+                  - img [ref=e291]
+            - listitem [ref=e294]:
+              - article [ref=e295]:
+                - heading "Arroz" [level=3] [ref=e297]
+                - button "Ver preço de Arroz" [ref=e299] [cursor=pointer]:
+                  - generic [ref=e300]: Ver preço
+                  - img [ref=e301]
+            - listitem [ref=e304]:
+              - article [ref=e305]:
+                - heading "Arroz à Grega" [level=3] [ref=e307]
+                - button "Ver preço de Arroz à Grega" [ref=e309] [cursor=pointer]:
+                  - generic [ref=e310]: Ver preço
+                  - img [ref=e311]
+            - listitem [ref=e314]:
+              - article [ref=e315]:
+                - heading "Feijão" [level=3] [ref=e317]
+                - button "Ver preço de Feijão" [ref=e319] [cursor=pointer]:
+                  - generic [ref=e320]: Ver preço
+                  - img [ref=e321]
+            - listitem [ref=e324]:
+              - article [ref=e325]:
+                - heading "Farofa" [level=3] [ref=e327]
+                - button "Ver preço de Farofa" [ref=e329] [cursor=pointer]:
+                  - generic [ref=e330]: Ver preço
+                  - img [ref=e331]
+            - listitem [ref=e334]:
+              - article [ref=e335]:
+                - heading "Vinagrete" [level=3] [ref=e337]
+                - button "Ver preço de Vinagrete" [ref=e339] [cursor=pointer]:
+                  - generic [ref=e340]: Ver preço
+                  - img [ref=e341]
+            - listitem [ref=e344]:
+              - article [ref=e345]:
+                - heading "Pirão" [level=3] [ref=e347]
+                - button "Ver preço de Pirão" [ref=e349] [cursor=pointer]:
+                  - generic [ref=e350]: Ver preço
+                  - img [ref=e351]
+        - paragraph [ref=e354]: Preços e itens sujeitos a alteração sem aviso prévio. Consulte disponibilidade pelo WhatsApp.
+    - region [ref=e355]:
+      - generic [ref=e357]:
+        - generic [ref=e358]:
+          - generic [ref=e359]:
+            - heading "Café da Manhã" [level=2] [ref=e360]
+            - paragraph [ref=e361]: O melhor jeito de começar o dia
+          - paragraph [ref=e363]: O café da manhã do Pitauá é um dos favoritos dos hóspedes. Farto, variado e preparado com ingredientes frescos, inclui pães artesanais, bolos caseiros, frutas da estação, frios, ovos e muito mais — tudo com o sabor de comida feita em casa.
+          - list [ref=e364]:
+            - listitem [ref=e365]:
+              - img [ref=e366]
+              - text: Pães artesanais e bolos caseiros
+            - listitem [ref=e369]:
+              - img [ref=e370]
+              - text: Frutas frescas da estação
+            - listitem [ref=e373]:
+              - img [ref=e374]
+              - text: Frios e queijos
+            - listitem [ref=e377]:
+              - img [ref=e378]
+              - text: Ovos mexidos e estrelados
+            - listitem [ref=e381]:
+              - img [ref=e382]
+              - text: Sucos naturais
+            - listitem [ref=e385]:
+              - img [ref=e386]
+              - text: Café, leite e achocolatado
+            - listitem [ref=e389]:
+              - img [ref=e390]
+              - text: Geleias e doces artesanais
+        - 'img "IMAGEM: Mesa de café da manhã farta — pães, frutas, sucos, ambiente acolhedor" [ref=e393]':
+          - img [ref=e394]
+          - generic [ref=e398]: "📷 IMAGEM: Mesa de café da manhã farta — pães, frutas, sucos, ambiente acolhedor"
+    - region [ref=e399]:
+      - generic [ref=e400]:
+        - heading "Um ambiente para boas lembranças" [level=2] [ref=e402]
+        - generic [ref=e404]:
+          - 'img "IMAGEM: Interior do restaurante — mesas e decoração" [ref=e405]':
+            - img [ref=e406]
+            - generic [ref=e410]: "📷 IMAGEM: Interior do restaurante — mesas e decoração"
+          - 'img "IMAGEM: Prato principal elaborado" [ref=e411]':
+            - img [ref=e412]
+            - generic [ref=e416]: "📷 IMAGEM: Prato principal elaborado"
+          - 'img "IMAGEM: Café da manhã em destaque" [ref=e417]':
+            - img [ref=e418]
+            - generic [ref=e422]: "📷 IMAGEM: Café da manhã em destaque"
+          - 'img "IMAGEM: Área externa do restaurante ou varanda" [ref=e423]':
+            - img [ref=e424]
+            - generic [ref=e428]: "📷 IMAGEM: Área externa do restaurante ou varanda"
+          - 'img "IMAGEM: Detalhes da decoração — objetos rústicos, flores" [ref=e429]':
+            - img [ref=e430]
+            - generic [ref=e434]: "📷 IMAGEM: Detalhes da decoração — objetos rústicos, flores"
+          - 'img "IMAGEM: Equipe ou cozinha (opcional)" [ref=e435]':
+            - img [ref=e436]
+            - generic [ref=e440]: "📷 IMAGEM: Equipe ou cozinha (opcional)"
+    - region "Eventos e Celebrações" [ref=e441]:
+      - generic [ref=e442]:
+        - heading "Eventos e Celebrações" [level=2] [ref=e443]
+        - paragraph [ref=e444]: Nosso espaço gastronômico também está disponível para eventos privados, confraternizações e celebrações especiais. Consulte-nos para montar o menu ideal para o seu evento.
+        - generic [ref=e445]:
+          - link "Fale pelo WhatsApp" [ref=e446] [cursor=pointer]:
+            - /url: https://wa.me/5519996073390?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20restaurante%20do%20Pitau%C3%A1.
+            - img [ref=e447]
+            - text: Fale pelo WhatsApp
+          - link "Saiba mais sobre eventos" [ref=e449] [cursor=pointer]:
+            - /url: /eventos
+  - contentinfo [ref=e450]:
+    - generic [ref=e451]:
+      - generic [ref=e452]:
+        - generic [ref=e453]:
+          - link "Pitauá — início" [ref=e454] [cursor=pointer]:
+            - /url: /
+            - img "Pitauá Centro de Lazer — Raízes do Interior" [ref=e455]
+          - paragraph [ref=e456]: Centro de lazer completo em Socorro-SP. Natureza e acolhimento para toda a família.
+          - generic [ref=e457]:
+            - link "Instagram — Restaurante & Pesqueiro" [ref=e458] [cursor=pointer]:
+              - /url: https://www.instagram.com/pitauacentrodelazer/
+              - img [ref=e459]
+            - link "Instagram — Pousada Pitauá" [ref=e462] [cursor=pointer]:
+              - /url: https://www.instagram.com/pousadapitaua/
+              - img [ref=e463]
+            - link "Facebook" [ref=e466] [cursor=pointer]:
+              - /url: https://www.facebook.com/centropitaua.socorrosp
+              - img [ref=e467]
+            - link "WhatsApp" [ref=e469] [cursor=pointer]:
+              - /url: https://wa.me/5519996073390?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Pitau%C3%A1.
+              - img [ref=e470]
+        - generic [ref=e472]:
+          - heading "Nossas Áreas" [level=3] [ref=e473]
+          - list [ref=e474]:
+            - listitem [ref=e475]:
+              - link "Pousada" [ref=e476] [cursor=pointer]:
+                - /url: /pousada
+            - listitem [ref=e477]:
+              - link "Gastronomia" [ref=e478] [cursor=pointer]:
+                - /url: /gastronomia
+            - listitem [ref=e479]:
+              - link "Pesqueiro" [ref=e480] [cursor=pointer]:
+                - /url: /pesqueiro
+            - listitem [ref=e481]:
+              - link "Eventos" [ref=e482] [cursor=pointer]:
+                - /url: /eventos
+        - generic [ref=e483]:
+          - generic [ref=e484]:
+            - heading "Telefones" [level=3] [ref=e485]
+            - list [ref=e486]:
+              - listitem [ref=e487]:
+                - link "(19) 99607-3390 Pousada" [ref=e488] [cursor=pointer]:
+                  - /url: https://wa.me/5519996073390?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Pitau%C3%A1.
+                  - img [ref=e489]
+                  - generic [ref=e491]:
+                    - generic [ref=e492]: (19) 99607-3390
+                    - generic [ref=e493]: Pousada
+              - listitem [ref=e494]:
+                - link "(19) 99744-4578 Pesqueiro e Restaurante" [ref=e495] [cursor=pointer]:
+                  - /url: https://wa.me/5519997444578?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Pitau%C3%A1.
+                  - img [ref=e496]
+                  - generic [ref=e498]:
+                    - generic [ref=e499]: (19) 99744-4578
+                    - generic [ref=e500]: Pesqueiro e Restaurante
+          - generic [ref=e501]:
+            - heading "Horários" [level=3] [ref=e502]
+            - list [ref=e503]:
+              - listitem [ref=e504]:
+                - img [ref=e505]
+                - generic [ref=e508]:
+                  - generic [ref=e509]: Restaurante
+                  - generic [ref=e510]: "Quarta a Domingo: 11h às 16h"
+              - listitem [ref=e511]:
+                - img [ref=e512]
+                - generic [ref=e515]:
+                  - generic [ref=e516]: Pesqueiro
+                  - generic [ref=e517]: "Quarta a Domingo: 08h às 18h"
+                  - generic [ref=e518]: 01 lago de pesca
+        - generic [ref=e519]:
+          - generic [ref=e520]:
+            - heading "E-mails" [level=3] [ref=e521]
+            - list [ref=e522]:
+              - listitem [ref=e523]:
+                - link "pousadapitaua@gmail.com Contato" [ref=e524] [cursor=pointer]:
+                  - /url: mailto:pousadapitaua@gmail.com
+                  - img [ref=e525]
+                  - generic [ref=e528]:
+                    - generic [ref=e529]: pousadapitaua@gmail.com
+                    - generic [ref=e530]: Contato
+          - generic [ref=e531]:
+            - heading "Localização" [level=3] [ref=e532]
+            - link "Rod. Otávio de Oliveira Santos, Km3 | Socorro/SP" [ref=e534] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/61bWkKfdi1Extug59
+              - img [ref=e535]
+              - generic [ref=e538]: Rod. Otávio de Oliveira Santos, Km3 | Socorro/SP
+      - generic [ref=e540]:
+        - paragraph [ref=e541]: © 2026 Pitauá Centro de Lazer — Socorro-SP
+        - paragraph [ref=e542]: Feito com carinho para o turismo de Socorro-SP
+  - link "Fale conosco pelo WhatsApp" [ref=e543] [cursor=pointer]:
+    - /url: https://wa.me/5519997444578?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20restaurante%20do%20Pitau%C3%A1.
+    - generic: Fale pelo WhatsApp
+    - img [ref=e545]
+  - button "Open Next.js Dev Tools" [ref=e552] [cursor=pointer]:
+    - img [ref=e553]
