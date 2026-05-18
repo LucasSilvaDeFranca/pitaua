@@ -1,6 +1,6 @@
 const items = [
   "Pousada",
-  "Gastronomia",
+  "Restaurante",
   "Pesqueiro",
   "Eventos",
   "Socorro · SP",

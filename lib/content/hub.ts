@@ -18,8 +18,8 @@ export const hubContent = {
     ],
   },
   highlights: [
-    { icon: "Waves", label: "Piscina Adulto e Infantil" },
-    { icon: "Coffee", label: "Café da Manhã Incluso" },
+    { icon: "BedDouble", label: "Hospedagem" },
+    { icon: "UtensilsCrossed", label: "Restaurante" },
     { icon: "Fish", label: "Pesca Esportiva" },
     { icon: "Trees", label: "Mini Fazenda" },
     { icon: "Baby", label: "Playground" },
@@ -37,7 +37,7 @@ export const hubContent = {
     },
     {
       id: "gastronomia",
-      title: "Gastronomia",
+      title: "Restaurante",
       description: "Sabores do interior em ambiente acolhedor",
       href: "/gastronomia",
       image: "/images/hub/restaurante-pitaua-socorro-sp.jpg",

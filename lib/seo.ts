@@ -68,7 +68,7 @@ export const jsonLdPesqueiro = buildJsonLd("SportsActivityLocation", {
   "@type": "SportsActivityLocation",
   name: "Pesqueiro Pitauá — Socorro-SP",
   description:
-    "Pesqueiro com lagos de pesca esportiva em Socorro-SP. Ambiente natural e estrutura completa para uma experiência de pesca inesquecível.",
+    "Pesqueiro com lago de pesca esportiva em Socorro-SP. Ambiente natural e estrutura completa para uma experiência de pesca inesquecível.",
   sport: "Fishing",
 });
 

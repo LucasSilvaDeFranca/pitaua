@@ -6,10 +6,10 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Pousada", href: "/pousada" },
-  { label: "Gastronomia", href: "/gastronomia" },
-  { label: "Pesqueiro", href: "/pesqueiro" },
-  { label: "Eventos", href: "/eventos" },
+  { label: "Pousada", href: "/pousada", highlight: false },
+  { label: "Restaurante", href: "/gastronomia", highlight: true },
+  { label: "Pesqueiro", href: "/pesqueiro", highlight: false },
+  { label: "Eventos", href: "/eventos", highlight: false },
 ];
 
 export function SiteHeader() {
@@ -67,7 +67,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-5 py-2 text-sm font-medium text-pitaua-ink/65 hover:text-pitaua-ink transition-colors tracking-wide"
+                className="px-5 py-2 text-sm font-bold text-pitaua-ink hover:text-pitaua-earth transition-colors tracking-wide"
               >
                 {item.label}
               </Link>
@@ -98,7 +98,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="flex items-center justify-between py-4 text-base font-medium text-pitaua-ink/70 hover:text-pitaua-ink border-b border-pitaua-rule last:border-0 transition-colors"
+              className="flex items-center justify-between py-4 border-b border-pitaua-rule last:border-0 transition-colors text-base font-bold text-pitaua-ink hover:text-pitaua-earth"
               onClick={() => setMenuOpen(false)}
             >
               {item.label}

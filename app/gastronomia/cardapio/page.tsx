@@ -28,7 +28,7 @@ export default function CardapioPage() {
             className="inline-flex items-center gap-2 text-sm font-medium text-pitaua-dark/60 hover:text-pitaua-brick transition-colors"
           >
             <ArrowLeft size={16} aria-hidden />
-            Voltar para Gastronomia
+            Voltar para o Restaurante
           </Link>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { eventosContent } from "@/lib/content/eventos";
-import { CheckCircle2, Users, Music, ChefHat, ParkingCircle, Wifi, Trees, Waves, Fish } from "lucide-react";
+import { CheckCircle2, Users, Music, ChefHat, ParkingCircle, Wifi, Trees, ToyBrick, Martini } from "lucide-react";
 
 const iconMap: Record<string, React.ElementType> = {
   Users,
@@ -10,8 +10,8 @@ const iconMap: Record<string, React.ElementType> = {
   ParkingCircle,
   Wifi,
   Trees,
-  Waves,
-  Fish,
+  ToyBrick,
+  Martini,
 };
 
 export function EstruturaEventosSection() {

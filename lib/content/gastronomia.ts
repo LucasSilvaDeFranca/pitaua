@@ -20,9 +20,9 @@ export const gastronomiaContent = {
       "Venha saborear a gastronomia do Restaurante Pitauá em Socorro-SP. Café da manhã incluso para hóspedes, almoço com pratos da culinária regional e ambiente acolhedor.",
   },
   hero: {
-    title: "Gastronomia com alma de interior",
+    title: "Restaurante com alma de interior",
     subtitle: "Sabores autênticos preparados com carinho em Socorro-SP",
-    cta: "Fale conosco",
+    cta: "Ver cardápio",
     imagePlaceholder:
       "IMAGEM HERO: Mesa posta com pratos típicos ou ambiente do restaurante — foto de alta qualidade, iluminação quente",
   },

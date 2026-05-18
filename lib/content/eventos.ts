@@ -53,12 +53,12 @@ export const eventosContent = {
     itens: [
       { icon: "Users", label: "Capacidade para grupos" },
       { icon: "Music", label: "Espaço para música e entretenimento" },
-      { icon: "ChefHat", label: "Gastronomia disponível" },
+      { icon: "ChefHat", label: "Cardápio personalizado" },
       { icon: "ParkingCircle", label: "Estacionamento amplo" },
       { icon: "Wifi", label: "Wi-Fi disponível" },
       { icon: "Trees", label: "Áreas ao ar livre" },
-      { icon: "Waves", label: "Acesso à piscina" },
-      { icon: "Fish", label: "Área do pesqueiro" },
+      { icon: "ToyBrick", label: "Playground" },
+      { icon: "Martini", label: "Drinks personalizados" },
     ],
     nota: "Capacidade e configurações específicas sob consulta. Entre em contato para montar o pacote ideal.",
     images: [

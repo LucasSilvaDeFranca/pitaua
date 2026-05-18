@@ -1,10 +1,10 @@
 import {
-  Waves, Coffee, Fish, Trees, Baby, PartyPopper,
+  BedDouble, UtensilsCrossed, Fish, Trees, Baby, PartyPopper,
 } from "lucide-react";
 import { hubContent } from "@/lib/content/hub";
 
 const iconMap: Record<string, React.ElementType> = {
-  Waves, Coffee, Fish, Trees, Baby, PartyPopper,
+  BedDouble, UtensilsCrossed, Fish, Trees, Baby, PartyPopper,
 };
 
 export function HighlightsStrip() {
@@ -28,7 +28,7 @@ export function HighlightsStrip() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-2">
           {highlights.map((item, i) => {
-            const Icon = iconMap[item.icon] || Waves;
+            const Icon = iconMap[item.icon] || BedDouble;
             return (
               <div
                 key={i}

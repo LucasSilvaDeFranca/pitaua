@@ -13,7 +13,7 @@ import { getWhatsAppLink, WHATSAPP_MESSAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title:
-    "Pitauá | Centro de Lazer em Socorro-SP — Pousada, Gastronomia, Pesqueiro e Eventos",
+    "Pitauá | Centro de Lazer em Socorro-SP — Pousada, Restaurante, Pesqueiro e Eventos",
   description:
     "Pitauá é um centro de lazer completo em Socorro-SP. Pousada com 15 quartos, restaurante, pesqueiro e espaço para eventos. Natureza, lazer e acolhimento para toda a família.",
   openGraph: {

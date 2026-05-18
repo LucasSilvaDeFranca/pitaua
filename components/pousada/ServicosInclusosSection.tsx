@@ -6,7 +6,7 @@ import {
   Coffee,
   Waves,
   Utensils,
-  Sparkles,
+  Fish,
   Image as ImageIcon,
   ZoomIn,
   X,
@@ -20,7 +20,7 @@ const iconMap: Record<string, LucideIcon> = {
   Coffee,
   Waves,
   Utensils,
-  Sparkles,
+  Fish,
 };
 
 const items = [...pousadaContent.estrutura, ...pousadaContent.servicos];

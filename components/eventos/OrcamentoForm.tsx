@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { eventosContent } from "@/lib/content/eventos";
-import { getWhatsAppLink } from "@/lib/constants";
+import { getWhatsAppLink, AREA_WHATSAPP } from "@/lib/constants";
 import { CheckCircle2 } from "lucide-react";
 
 interface FormData {
@@ -40,7 +40,11 @@ export function OrcamentoForm() {
 
 *Contato:* ${data.email} | ${data.telefone}`;
 
-    window.open(getWhatsAppLink(msg), "_blank", "noopener,noreferrer");
+    window.open(
+      getWhatsAppLink(msg, AREA_WHATSAPP.eventos),
+      "_blank",
+      "noopener,noreferrer",
+    );
     setSubmitted(true);
   }
 

@@ -9,7 +9,7 @@ export default function GastronomiaLayout({
 }) {
   return (
     <>
-      <AreaHeader areaName="Gastronomia" />
+      <AreaHeader areaName="Restaurante" />
       <main id="main-content">{children}</main>
       <SiteFooter />
       <WhatsAppFloat area="gastronomia" />

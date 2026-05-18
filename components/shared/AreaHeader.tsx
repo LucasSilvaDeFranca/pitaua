@@ -11,7 +11,7 @@ interface AreaHeaderProps {
 
 const navItems = [
   { label: "Pousada", href: "/pousada" },
-  { label: "Gastronomia", href: "/gastronomia" },
+  { label: "Restaurante", href: "/gastronomia" },
   { label: "Pesqueiro", href: "/pesqueiro" },
   { label: "Eventos", href: "/eventos" },
 ];
@@ -75,10 +75,10 @@ export function AreaHeader({ areaName }: AreaHeaderProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`px-4 py-2 text-sm font-medium transition-colors tracking-wide ${
+                className={`px-4 py-2 text-sm font-bold transition-colors tracking-wide ${
                   item.label === areaName
-                    ? "text-pitaua-ink"
-                    : "text-pitaua-ink/55 hover:text-pitaua-ink"
+                    ? "text-pitaua-earth"
+                    : "text-pitaua-ink hover:text-pitaua-earth"
                 }`}
               >
                 {item.label}
@@ -118,8 +118,8 @@ export function AreaHeader({ areaName }: AreaHeaderProps) {
             <Link
               key={item.href}
               href={item.href}
-              className={`flex items-center justify-between py-4 text-base font-medium border-b border-pitaua-rule last:border-0 transition-colors ${
-                item.label === areaName ? "text-pitaua-ink" : "text-pitaua-ink/60 hover:text-pitaua-ink"
+              className={`flex items-center justify-between py-4 text-base font-bold border-b border-pitaua-rule last:border-0 transition-colors ${
+                item.label === areaName ? "text-pitaua-earth" : "text-pitaua-ink hover:text-pitaua-earth"
               }`}
               onClick={() => setMenuOpen(false)}
             >

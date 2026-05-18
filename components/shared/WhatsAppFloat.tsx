@@ -1,5 +1,5 @@
 import { MessageCircle } from "lucide-react";
-import { getWhatsAppLink, WHATSAPP_MESSAGES, FLOAT_WHATSAPP } from "@/lib/constants";
+import { getWhatsAppLink, WHATSAPP_MESSAGES, AREA_WHATSAPP } from "@/lib/constants";
 
 interface WhatsAppFloatProps {
   area?: keyof typeof WHATSAPP_MESSAGES;
@@ -7,7 +7,7 @@ interface WhatsAppFloatProps {
 
 export function WhatsAppFloat({ area = "geral" }: WhatsAppFloatProps) {
   const message = WHATSAPP_MESSAGES[area];
-  const link = getWhatsAppLink(message, FLOAT_WHATSAPP);
+  const link = getWhatsAppLink(message, AREA_WHATSAPP[area]);
 
   return (
     <a

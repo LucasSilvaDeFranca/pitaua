@@ -5,7 +5,7 @@ import { ADDRESS, EMAILS, HOURS, PHONES, SOCIAL, getWhatsAppLink, WHATSAPP_MESSA
 
 const areaLinks = [
   { label: "Pousada", href: "/pousada" },
-  { label: "Gastronomia", href: "/gastronomia" },
+  { label: "Restaurante", href: "/gastronomia" },
   { label: "Pesqueiro", href: "/pesqueiro" },
   { label: "Eventos", href: "/eventos" },
 ];

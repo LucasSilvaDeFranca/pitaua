@@ -213,19 +213,17 @@ export const pousadaContent = {
   ],
   servicos: [
     {
-      icon: "Sparkles",
-      title: "Massagem",
-      description: "Serviço de massagem disponível mediante agendamento — complemente o relaxamento da sua estadia com um cuidado especial.",
-      cover: "/images/pousada/inclusos/massagem/cover-v3.png" as string | null,
+      icon: "Fish",
+      title: "Pesca Esportiva",
+      description: "Solte a linha no lago da pousada — pesca esportiva em meio à natureza, a poucos passos do seu quarto.",
+      cover: "/images/pousada/inclusos/pesca-esportiva/cover.jpg" as string | null,
       gallery: [
-        "/images/pousada/inclusos/massagem/01.jpg",
-        "/images/pousada/inclusos/massagem/02.jpg",
-        "/images/pousada/inclusos/massagem/03.jpg",
-        "/images/pousada/inclusos/massagem/04.jpg",
-        "/images/pousada/inclusos/massagem/05.jpg",
-        "/images/pousada/inclusos/massagem/06.jpg",
-        "/images/pousada/inclusos/massagem/07.png",
-        "/images/pousada/inclusos/massagem/08.png",
+        "/images/pesqueiro/galeria/Pesqueiro Pitauá (6).png",
+        "/images/pesqueiro/galeria/Pesqueiro Pitauá (4).png",
+        "/images/pesqueiro/galeria/Pesqueiro Pitauá (3).png",
+        "/images/pesqueiro/galeria/Pesqueiro Pitauá (2).png",
+        "/images/pousada/inclusos/pesca-esportiva/01.jpg",
+        "/images/pesqueiro/galeria/Criança no Pesqueiro Pitauá.png",
       ] as string[],
     },
   ],
@@ -259,6 +257,10 @@ export const pousadaContent = {
     {
       pergunta: "O café da manhã está incluso na diária?",
       resposta: "Sim! O café da manhã está incluso em todas as diárias da Pousada Pitauá, servido diariamente com opções variadas.",
+    },
+    {
+      pergunta: "A pesca está inclusa na estadia?",
+      resposta: "Sim, a pesca esportiva já está inclusa na estadia, disponível das 8h às 18h no lago da pousada.",
     },
     {
       pergunta: "Posso levar animais de estimação?",

@@ -6,7 +6,9 @@ import { ExperienciasSection } from "@/components/pousada/ExperienciasSection";
 import { ServicosInclusosSection } from "@/components/pousada/ServicosInclusosSection";
 import { FAQSection } from "@/components/pousada/FAQSection";
 import { MapSection } from "@/components/shared/MapSection";
+import { TestimonialsCarousel } from "@/components/shared/TestimonialsCarousel";
 import { pousadaContent } from "@/lib/content/pousada";
+import { pousadaTestimonials } from "@/lib/content/testimonials";
 import { jsonLdPousada, serializeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -34,6 +36,13 @@ export default function PousadaPage() {
       <EstruturaSection />
       <ExperienciasSection />
       <ServicosInclusosSection />
+      <TestimonialsCarousel
+        id="pousada-testimonials"
+        label="Depoimentos"
+        title="O que dizem nossos hóspedes"
+        subtitle="Histórias reais de quem já se hospedou no Pitauá"
+        testimonials={pousadaTestimonials}
+      />
       <FAQSection />
       <MapSection />
     </>

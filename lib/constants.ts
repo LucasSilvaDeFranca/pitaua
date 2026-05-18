@@ -19,7 +19,7 @@ export const CONTACT = {
   phoneE164: "+55-19-99607-3390",
 };
 
-// Número que atende a bolinha flutuante de WhatsApp em todas as páginas.
+// Número padrão da bolinha flutuante quando a área não tem mapeamento específico.
 // Atendimento principal (Restaurante) — front-of-house é o canal mais ativo.
 export const FLOAT_WHATSAPP = "5519997444578";
 
@@ -95,6 +95,18 @@ export const WHATSAPP_MESSAGES = {
   eventos:
     "Olá! Gostaria de solicitar um orçamento para evento no Pitauá.",
 };
+
+// Número de destino da bolinha flutuante por área do site.
+// Pousada -> número da Pousada; demais áreas -> Pesqueiro/Restaurante.
+// `satisfies` garante exaustividade: se uma nova área entrar em WHATSAPP_MESSAGES,
+// o TS reclama aqui até que seja mapeada.
+export const AREA_WHATSAPP = {
+  geral: PHONES[1].whatsapp,
+  pousada: PHONES[0].whatsapp,
+  gastronomia: PHONES[1].whatsapp,
+  pesqueiro: PHONES[1].whatsapp,
+  eventos: PHONES[1].whatsapp,
+} as const satisfies Record<keyof typeof WHATSAPP_MESSAGES, string>;
 
 export function getWhatsAppLink(message: string, number: string = WHATSAPP_NUMBER): string {
   const digits = number.replace(/\D/g, "");

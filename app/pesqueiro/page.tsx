@@ -3,9 +3,11 @@ import { HeroPesqueiro } from "@/components/pesqueiro/HeroPesqueiro";
 import { ExperienciaPescaSection } from "@/components/pesqueiro/ExperienciaPescaSection";
 import { InfoPraticasSection } from "@/components/pesqueiro/InfoPraticasSection";
 import { GaleriaPesqueiro } from "@/components/pesqueiro/GaleriaPesqueiro";
+import { TestimonialsCarousel } from "@/components/shared/TestimonialsCarousel";
 import { Button } from "@/components/ui/Button";
 import { getWhatsAppLink, WHATSAPP_MESSAGES } from "@/lib/constants";
 import { pesqueiroContent } from "@/lib/content/pesqueiro";
+import { pesqueiroTestimonials } from "@/lib/content/testimonials";
 import { jsonLdPesqueiro, serializeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -32,6 +34,14 @@ export default function PesqueiroPage() {
       <ExperienciaPescaSection />
       <InfoPraticasSection />
       <GaleriaPesqueiro />
+
+      <TestimonialsCarousel
+        id="pesqueiro-testimonials"
+        label="Depoimentos"
+        title="Quem pescou recomenda"
+        subtitle="Histórias reais de quem soltou a linha no Pitauá"
+        testimonials={pesqueiroTestimonials}
+      />
 
       {/* CTA final */}
       <section className="py-20 bg-pitaua-ink text-center" aria-labelledby="pesqueiro-cta-heading">

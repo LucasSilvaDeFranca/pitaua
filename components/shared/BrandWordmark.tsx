@@ -36,7 +36,7 @@ export function BrandWordmark({
       PITAUÁ
       {withRegistered && (
         <sup
-          className="text-[0.4em] font-normal align-super ml-0.5 opacity-70"
+          className="text-[0.28em] font-normal align-super ml-1 opacity-60"
           aria-hidden
         >
           ®

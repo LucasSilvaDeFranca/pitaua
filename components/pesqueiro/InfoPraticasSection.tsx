@@ -1,7 +1,14 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { pesqueiroContent } from "@/lib/content/pesqueiro";
-import { Clock, DollarSign, PackageCheck, ShieldCheck, CheckCircle2 } from "lucide-react";
+import {
+  Clock,
+  DollarSign,
+  PackageCheck,
+  ShieldCheck,
+  CheckCircle2,
+} from "lucide-react";
+import { RegrasModalTrigger } from "@/components/pesqueiro/RegrasModalTrigger";
 
 const iconMap: Record<string, React.ElementType> = {
   Clock,
@@ -58,6 +65,18 @@ export function InfoPraticasSection() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {infoPraticas.items.map((item, i) => {
               const Icon = iconMap[item.icon] || Clock;
+
+              if ("openModal" in item && item.openModal === "regulamento") {
+                return (
+                  <RegrasModalTrigger
+                    key={i}
+                    title={item.title}
+                    content={item.content}
+                    regulamento={infoPraticas.regulamento}
+                  />
+                );
+              }
+
               return (
                 <div
                   key={i}
