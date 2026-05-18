@@ -10,6 +10,9 @@ import {
   Eye,
   UtensilsCrossed,
   ImageIcon,
+  Martini,
+  Wine,
+  Citrus,
   type LucideIcon,
 } from "lucide-react";
 import { Modal } from "@/components/ui/Modal";
@@ -26,6 +29,10 @@ const secaoIcones: Record<string, LucideIcon> = {
   porcoes: Drumstick,
   saladas: Salad,
   pratos: Soup,
+  "novos-drinks": Martini,
+  "drinks-casa": Wine,
+  caipirinhas: Citrus,
+  "caipirinhas-especiais": Citrus,
   sobremesa: Cake,
 };
 
