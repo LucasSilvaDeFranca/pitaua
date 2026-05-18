@@ -27,7 +27,7 @@ export function HeroHub() {
       {/* Top badge */}
       <div className="absolute top-24 left-1/2 -translate-x-1/2 z-10">
         <span
-          className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-medium tracking-[0.2em] uppercase border border-pitaua-earth/30 text-pitaua-ochre bg-pitaua-earth/10 backdrop-blur-sm"
+          className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-[10px] sm:text-xs font-medium tracking-[0.2em] uppercase whitespace-nowrap border border-pitaua-earth/30 text-pitaua-ochre bg-pitaua-earth/10 backdrop-blur-sm"
           style={{ animation: "fade-in 1s ease-out 0.3s both" }}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-pitaua-sun inline-block" aria-hidden />
@@ -36,7 +36,7 @@ export function HeroHub() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 px-6 sm:px-10 pb-20 pt-36 max-w-7xl mx-auto w-full">
+      <div className="relative z-10 px-6 sm:px-10 pb-20 pt-44 sm:pt-36 max-w-7xl mx-auto w-full">
         <div className="stagger max-w-5xl">
           <p className="font-display text-pitaua-ochre text-xs sm:text-sm font-normal tracking-[0.3em] uppercase mb-5">
             Centro de Lazer
