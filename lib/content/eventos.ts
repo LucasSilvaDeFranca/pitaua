@@ -75,7 +75,7 @@ export const eventosContent = {
   diferenciais: [
     "Ambiente natural único em Socorro-SP",
     "Gastronomia do próprio restaurante",
-    "Acesso à piscina e área de lazer",
+    "Acesso à área de lazer",
     "Estacionamento amplo e gratuito",
     "Equipe experiente em hospitalidade",
     "Flexibilidade para montar o evento do seu jeito",
